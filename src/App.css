@@ -1,38 +1,131 @@
-.App {
+/* ========== Global Theming ========== */
+:root {
+  --bg-main: #f5f3ea;
+  --bg-panel: #d8e3d4;
+  --text-primary: #2d2d2d;
+  --text-accent: #4b7553;
+  --highlight: #b3cbb9;
+  --border-color: #d0d0c0;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* ========== Base ========== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+}
+
+.app {
+  padding-top: 4rem; /* Make room for fixed header */
+  box-sizing: border-box;
+}
+
+/* ========== Section Layout ========== */
+.section {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  margin: 2.5rem auto;
+  border-radius: 0.75rem;
+  max-width: 1100px;
+  box-shadow: var(--shadow);
+}
+
+.section__title {
   text-align: center;
+  font-size: 1.8rem;
+  color: var(--text-accent);
+  margin-bottom: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ========== Typography ========== */
+h1, h2, h3, h4 {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-primary);
+}
+
+/* ========== Buttons ========== */
+.btn {
+  background-color: var(--highlight);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--text-accent);
+  color: var(--bg-main);
+}
+
+.btn--outline {
+  border: 2px solid var(--highlight);
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--highlight);
+  color: var(--text-accent);
+}
+
+/* ========== Utility Classes ========== */
+.center {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.link--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.link--icon svg {
+  font-size: 1.8rem;
+  color: var(--text-accent);
+}
+
+.link--icon:hover svg {
+  color: var(--text-primary);
+}
+
+/* ========== Responsive Tweaks ========== */
+@media (max-width: 768px) {
+  .section {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .section__title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
   }
 }

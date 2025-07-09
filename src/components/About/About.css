@@ -1,0 +1,64 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 6rem auto 4rem auto;
+  padding: 2rem;
+  background-color: var(--bg-panel);
+  border-radius: 0.75rem;
+  max-width: 900px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.about__name {
+  color: var(--text-accent);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about__role {
+  margin-top: 1.2em;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.about__desc {
+  font-size: 1rem;
+  max-width: 600px;
+  margin-top: 2em;
+  color: var(--text-primary);
+}
+
+.about__contact {
+  margin-top: 2.5em;
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.link--icon svg {
+  font-size: 1.8rem;
+  color: var(--text-accent);
+  transition: color 0.3s ease;
+}
+
+.link--icon:hover svg {
+  color: var(--text-primary);
+}
+
+.btn--outline {
+  border: 2px solid var(--highlight);
+  padding: 0.6em 1.2em;
+  background-color: transparent;
+  color: var(--text-primary);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn--outline:hover {
+  background-color: var(--highlight);
+  color: var(--text-accent);
+}
