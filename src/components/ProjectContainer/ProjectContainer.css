@@ -1,0 +1,67 @@
+.project-container {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.project-container:hover {
+  transform: translateY(-5px);
+}
+
+.project-title {
+  font-size: 1.6rem;
+  color: var(--text-accent);
+  margin-bottom: 0.5rem;
+}
+
+.project-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-stack-item {
+  background-color: var(--highlight);
+  padding: 0.3rem 0.75rem;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.link--icon svg {
+  font-size: 1.8rem;
+  color: var(--text-accent);
+  transition: color 0.3s ease;
+}
+
+.link--icon:hover svg {
+  color: var(--text-primary);
+}
