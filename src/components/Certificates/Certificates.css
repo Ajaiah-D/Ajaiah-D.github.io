@@ -1,0 +1,27 @@
+.certificates__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.certificate {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.certificate:hover {
+  transform: translateY(-5px);
+}
+
+.certificate__image {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.certificate__caption {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
