@@ -53,3 +53,7 @@ export const certificates = [
     link: 'https://coursera.org/share/9d7e9ad967679aeafb2141d74e7fe069' // Replace
   }
 ]
+
+export const contact = {
+  email: 'your.email@example.com',
+}
