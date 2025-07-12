@@ -1,5 +1,7 @@
 import React from 'react'
+// import { Link } from 'react-scroll'
 import './Header.css'
+import ThemeToggle from '../ThemeToggle/ThemeToggle'
 
 const Header = () => {
   return (
@@ -10,6 +12,7 @@ const Header = () => {
         <a href="#certificates" className="nav-link">Certificates</a>
         <a href="#contact" className="nav-link">Contact</a>
       </nav>
+      <ThemeToggle />
     </header>
   )
 }

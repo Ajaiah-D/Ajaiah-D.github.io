@@ -1,0 +1,19 @@
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  color: var(--text-accent);
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--text-primary);
+}
+
+.theme-toggle svg {
+  font-size: 1.8rem;
+}
