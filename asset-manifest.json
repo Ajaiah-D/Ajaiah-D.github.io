@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.15ff00f8.css",
+    "main.js": "/static/js/main.8b233ee6.js",
+    "static/media/AjaiahDarlington_Resume_v6.pdf": "/static/media/AjaiahDarlington_Resume_v6.08f936b0d0fc887d3a38.pdf",
+    "static/media/Coursera.png": "/static/media/Coursera.76bb0eb581ac4f118ca8.png",
+    "index.html": "/index.html",
+    "main.15ff00f8.css.map": "/static/css/main.15ff00f8.css.map",
+    "main.8b233ee6.js.map": "/static/js/main.8b233ee6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15ff00f8.css",
+    "static/js/main.8b233ee6.js"
+  ]
+}
