@@ -1,27 +1,93 @@
+/* ========== Education ========== */
+.education__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto 3.5rem;
+}
+
+.degree-card {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--text-accent);
+  border-radius: 0.5rem;
+  padding: 1.4rem 1.6rem;
+  box-shadow: var(--shadow);
+}
+
+.degree-card__degree {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem;
+}
+
+.degree-card__school {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.75rem;
+}
+
+.degree-card__year {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-accent);
+  background-color: var(--highlight);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* ========== Subsection heading ========== */
+.subsection__title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 2rem;
+}
+
+/* ========== Certificates ========== */
 .certificates__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
   justify-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .certificate {
   text-align: center;
   transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .certificate:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 .certificate__image {
-  width: 100px;
+  width: 110px;
   height: auto;
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
 }
 
-.certificate__caption {
-  font-size: 0.95rem;
+.certificate__title {
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--text-primary);
+  margin: 0 0 0.2rem;
+}
+
+.certificate__issuer {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
 }

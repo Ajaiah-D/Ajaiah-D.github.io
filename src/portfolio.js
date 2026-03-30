@@ -1,15 +1,16 @@
 import courseraLogo from './assets/certificates/Coursera.png'
+import resumePDF from './assets/AjaiahDarlington_Resume_v6.pdf'
 
 export const about = {
   name: 'Ajaiah Darlington',
-  role: 'Aspiring Data Scientist & Analyst',
+  role: 'Systems Thinker. Data-Driven Builder.',
   description:
-    "I'm a recent CS grad who blends structure, strategy, and curiosity. I enjoy building projects that merge sports, finance, and thoughtful systems design.",
-  resume: 'https://your-resume-link.pdf',
+    "I turn data into decisions. What drew me to analytics wasn't the math, it was what the math makes possible. In sports, in finance, in almost any system worth studying, the evidence tends to point the same direction: structure and consistency outperform cleverness over time. My work is about finding those patterns, understanding what drives outcomes, and translating that into decisions people can act on with confidence.",
+  resume: resumePDF,
   social: {
     github: 'https://github.com/Ajaiah-D',
     linkedin: 'https://www.linkedin.com/in/ajaiah-darlington-aba9b618b/'
-  }
+  },
 }
 
 export const projects = [
@@ -39,18 +40,37 @@ export const projects = [
   }
 ]
 
+export const degrees = [
+  {
+    degree: 'Bachelor of Arts in Computer Science',
+    school: 'CUNY Hunter College',
+    year: '2025'
+  },
+  {
+    degree: 'Associates in Information Systems',
+    school: 'CUNY New York City College of Technology',
+    year: '2020'
+  }
+]
+
 export const certificates = [
   {
     title: 'Financial Markets',
     issuer: 'Coursera / Yale',
     image: courseraLogo,
-    link: 'https://coursera.org/share/63146e50ba60538be607985419ec060e' // Replace
+    link: 'https://coursera.org/share/63146e50ba60538be607985419ec060e'
   },
   {
     title: 'Introduction to Data Engineering',
     issuer: 'Coursera',
     image: courseraLogo,
-    link: 'https://coursera.org/share/9d7e9ad967679aeafb2141d74e7fe069' // Replace
+    link: 'https://coursera.org/share/9d7e9ad967679aeafb2141d74e7fe069'
+  },
+  {
+    title: 'Google Data Analytics',
+    issuer: 'Google / Coursera',
+    image: courseraLogo,
+    link: 'https://coursera.org'
   }
 ]
 
