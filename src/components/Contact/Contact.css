@@ -1,15 +1,30 @@
 .contact {
+  background-color: var(--text-accent);
   flex-direction: column;
   text-align: center;
 }
 
-.contact a {
-  margin-top: 1.5rem;
-  display: inline-block;
-  text-decoration: none;
+.contact .section__title {
+  color: #ffffff;
 }
 
-.contact .btn {
+.contact .section__title::after {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.contact a {
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.contact .btn--outline {
+  border-color: #ffffff;
+  color: #ffffff;
   font-size: 1rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1.75rem;
+}
+
+.contact .btn--outline:hover {
+  background-color: #ffffff;
+  color: var(--text-accent);
 }
