@@ -37,6 +37,14 @@ export const projects = [
     stack: ['Python', 'Matplotlib', 'Finance APIs'],
     sourceCode: 'https://github.com/Ajaiah-D/portfolio-risk-analysis',
     livePreview: null
+  },
+  {
+    name: 'Scouting Intelligence Pipeline & Dashboard',
+    description:
+      'Built an end-to-end Python pipeline to identify undervalued footballers across Europe\'s Big 5 leagues. Merged FBref performance data with Transfermarkt valuations across 2,854 player-seasons, engineered a composite scoring model with position-specific weights, and visualised results in an interactive Tableau dashboard.',
+    stack: ['Python', 'Data Engineering', 'Sports Analytics', 'Tableau'],
+    sourceCode: 'https://github.com/Ajaiah-D/DA-Course-Scouting-Intelligence-Pipeline-and-Dashboard',
+    livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/ScoutingIntelligenceDashboard_17762156549180/Overview'
   }
 ]
 
