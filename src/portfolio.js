@@ -1,5 +1,5 @@
 import courseraLogo from './assets/certificates/Coursera.png'
-import resumePDF from './assets/AjaiahDarlington_Resume_v6.pdf'
+import resumePDF from './assets/ajaiahdarlington_resume_2026.pdf'
 
 export const about = {
   name: 'Ajaiah Darlington',
@@ -45,6 +45,22 @@ export const projects = [
     stack: ['Python', 'Data Engineering', 'Sports Analytics', 'Tableau'],
     sourceCode: 'https://github.com/Ajaiah-D/DA-Course-Scouting-Intelligence-Pipeline-and-Dashboard',
     livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/ScoutingIntelligenceDashboard_17762156549180/Overview'
+  },
+  {
+    name: 'Healthcare Claims Analytics',
+    description:
+      'Analyzed three years of CMS synthetic Medicare data across ~116,000 beneficiaries to surface cost concentration, chronic condition comorbidities, and 30-day readmission patterns. Built a 6-notebook Python/SQLite pipeline producing pre-aggregated exports for a Tableau dashboard — key finding: patients with 11+ chronic conditions cost 137x more per year than those with none.',
+    stack: ['Python', 'Pandas', 'SQL', 'SQLite', 'Jupyter', 'Tableau'],
+    sourceCode: 'https://github.com/Ajaiah-D/Healthcare-Claims-Analytics',
+    livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/HealthcareClaimsAnalyticsDashboard_17777471179890/HealthcareClaims-Summary'
+  },
+  {
+    name: 'Soccer Media Benchmarking Dashboard',
+    description:
+      'Built a data pipeline that ingests YouTube channel metrics via the YouTube Data API, stores them in BigQuery, transforms them with dbt, and visualizes them in a Streamlit dashboard. The key metric (views per subscriber) normalizes engagement across channels of different sizes, surfacing which soccer media outlets have audiences that actually watch. Full Python ETL with BigQuery, dbt staging/intermediate/marts layers, and a modern dashboard. All infrastructure stays within GCP\'s free tier.',
+    stack: ['Python', 'BigQuery', 'dbt', 'Streamlit', 'GCP', 'ETL'],
+    sourceCode: 'https://github.com/Ajaiah-D/soccer-media-benchmarking',
+    livePreview: null
   }
 ]
 
