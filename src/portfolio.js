@@ -3,7 +3,7 @@ import resumePDF from './assets/ajaiahdarlington_resume_2026.pdf'
 
 export const about = {
   name: 'Ajaiah Darlington',
-  role: 'Systems Thinker. Data-Driven Builder.',
+  role: 'Data Scientist. Analytics Engineer.',
   description:
     "I turn data into decisions. What drew me to analytics wasn't the math, it was what the math makes possible. In sports, in finance, in almost any system worth studying, the evidence tends to point the same direction: structure and consistency outperform cleverness over time. My work is about finding those patterns, understanding what drives outcomes, and translating that into decisions people can act on with confidence.",
   resume: resumePDF,
@@ -34,7 +34,7 @@ export const projects = [
     name: 'Portfolio Risk Analysis Tool',
     description:
       'Interactive Streamlit app supporting up to 25 stocks with 1–10 years of historical data. Computes Sharpe ratio, Sortino ratio, Beta, Value at Risk, CVaR, max drawdown, and asset correlation matrix — all benchmarked against the S&P 500 — to help investors assess whether their portfolio is appropriately diversified or volatility-optimized. Visualizes an efficient frontier across 2,500 simulated portfolio weightings to surface superior risk-return combinations.',
-    stack: ['Python', 'Plotly', 'Streamlit', 'SQLite'],
+    stack: ['Python', 'Streamlit', 'Matplotlib', 'Finance APIs'],
     sourceCode: 'https://github.com/Ajaiah-D/portfolio-risk-analysis',
     livePreview: null
   },
