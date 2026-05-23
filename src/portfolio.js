@@ -17,7 +17,7 @@ export const projects = [
   {
     name: 'Player Performance Modeling',
     description:
-      'Built a classification model to predict TOTY nominees using multi-season performance data. Used Random Forest with feature engineering and tuning; achieved AUC >90%.',
+      'Built a Random Forest classifier to predict TOTY nominees from multi-season FBref data, challenging the increasingly bias-driven nature of major football awards by identifying statistically deserving candidates. Engineered position-specific features across top European leagues; key finding: goal contributions and progressive carries per 90 were the strongest predictors of nomination. Achieved AUC >90%.',
     stack: ['Python', 'Scikit-learn', 'Pandas'],
     sourceCode: 'https://github.com/Ajaiah-D/TOTY-Prediction',
     livePreview: null
@@ -33,8 +33,8 @@ export const projects = [
   {
     name: 'Portfolio Risk Analysis Tool',
     description:
-      'Built a tool to retrieve financial data, compute asset correlations and beta, and simulate risk-optimized portfolios using efficient frontier modeling.',
-    stack: ['Python', 'Matplotlib', 'Finance APIs'],
+      'Interactive Streamlit app supporting up to 25 stocks with 1–10 years of historical data. Computes Sharpe ratio, Sortino ratio, Beta, Value at Risk, CVaR, max drawdown, and asset correlation matrix — all benchmarked against the S&P 500 — to help investors assess whether their portfolio is appropriately diversified or volatility-optimized. Visualizes an efficient frontier across 2,500 simulated portfolio weightings to surface superior risk-return combinations.',
+    stack: ['Python', 'Plotly', 'Streamlit', 'SQLite'],
     sourceCode: 'https://github.com/Ajaiah-D/portfolio-risk-analysis',
     livePreview: null
   },
