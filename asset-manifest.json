@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.15ff00f8.css",
-    "main.js": "/static/js/main.cdc33571.js",
+    "main.js": "/static/js/main.3df053b2.js",
     "static/media/ajaiahdarlington_resume_2026.pdf": "/static/media/ajaiahdarlington_resume_2026.60d8abe82036e4b0d35b.pdf",
     "static/media/Coursera.png": "/static/media/Coursera.76bb0eb581ac4f118ca8.png",
     "index.html": "/index.html",
     "main.15ff00f8.css.map": "/static/css/main.15ff00f8.css.map",
-    "main.cdc33571.js.map": "/static/js/main.cdc33571.js.map"
+    "main.3df053b2.js.map": "/static/js/main.3df053b2.js.map"
   },
   "entrypoints": [
     "static/css/main.15ff00f8.css",
-    "static/js/main.cdc33571.js"
+    "static/js/main.3df053b2.js"
   ]
 }
