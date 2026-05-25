@@ -27,7 +27,7 @@ export const projects = [
     description:
       'Engineered backend of a sleep analysis app that collects user input and predicts sleep efficiency. Built with FastAPI, PostgreSQL, and a Random Forest model.',
     stack: ['FastAPI', 'PostgreSQL', 'Python'],
-    sourceCode: 'https://github.com/Ajaiah-D/sleep-predictor',
+    sourceCode: 'https://github.com/Ajaiah-D/HunterCapstoneSpring2025',
     livePreview: null
   },
   {
