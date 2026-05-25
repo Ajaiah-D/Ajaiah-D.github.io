@@ -3,7 +3,7 @@ import resumePDF from './assets/ajaiahdarlington_resume_2026.pdf'
 
 export const about = {
   name: 'Ajaiah Darlington',
-  role: 'Data Scientist. Analytics Engineer.',
+  role: 'Systems Thinker. Data-Driven Builder.',
   description:
     "I turn data into decisions. What drew me to analytics wasn't the math, it was what the math makes possible. In sports, in finance, in almost any system worth studying, the evidence tends to point the same direction: structure and consistency outperform cleverness over time. My work is about finding those patterns, understanding what drives outcomes, and translating that into decisions people can act on with confidence.",
   resume: resumePDF,
@@ -15,11 +15,11 @@ export const about = {
 
 export const projects = [
   {
-    name: 'Player Performance Modeling',
+    name: 'Football Player Profiler',
     description:
-      'Built a Random Forest classifier to predict TOTY nominees from multi-season FBref data, challenging the increasingly bias-driven nature of major football awards by identifying statistically deserving candidates. Engineered position-specific features across top European leagues; key finding: goal contributions and progressive carries per 90 were the strongest predictors of nomination. Achieved AUC >90%.',
-    stack: ['Python', 'Scikit-learn', 'Pandas'],
-    sourceCode: 'https://github.com/Ajaiah-D/TOTY-Prediction',
+      'Built a cloud-backed football analytics app covering 7 seasons (2017–2024) of player data across Europe\'s Big 5 leagues. Scraped and cleaned ~14,000 player-season records from FBref, ran them through an automated ETL pipeline into Google Cloud Storage and BigQuery, and built a position-aware cosine similarity model to surface statistically comparable players. Deployed as an interactive Streamlit app with live BigQuery queries, percentile rankings by position, and filters by season, league, and club.',
+    stack: ['Python', 'Google Cloud Platform', 'BigQuery', 'Streamlit'],
+    sourceCode: 'https://github.com/M4G1C14N5/scouting-report',
     livePreview: null
   },
   {
@@ -33,8 +33,8 @@ export const projects = [
   {
     name: 'Portfolio Risk Analysis Tool',
     description:
-      'Interactive Streamlit app supporting up to 25 stocks with 1–10 years of historical data. Computes Sharpe ratio, Sortino ratio, Beta, Value at Risk, CVaR, max drawdown, and asset correlation matrix — all benchmarked against the S&P 500 — to help investors assess whether their portfolio is appropriately diversified or volatility-optimized. Visualizes an efficient frontier across 2,500 simulated portfolio weightings to surface superior risk-return combinations.',
-    stack: ['Python', 'Streamlit', 'Matplotlib', 'Finance APIs'],
+      'Built a tool to retrieve financial data, compute asset correlations and beta, and simulate risk-optimized portfolios using efficient frontier modeling.',
+    stack: ['Python', 'Matplotlib', 'Finance APIs'],
     sourceCode: 'https://github.com/Ajaiah-D/portfolio-risk-analysis',
     livePreview: null
   },
