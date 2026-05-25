@@ -33,8 +33,8 @@ export const projects = [
   {
     name: 'Portfolio Risk Analysis Tool',
     description:
-      'Built a tool to retrieve financial data, compute asset correlations and beta, and simulate risk-optimized portfolios using efficient frontier modeling.',
-    stack: ['Python', 'Matplotlib', 'Finance APIs'],
+      'Built an interactive investment risk dashboard where users select up to 25 S&P 500 stocks or ETFs and instantly see how their portfolio holds up on metrics like Sharpe ratio, Beta, Max Drawdown, and Value-at-Risk — all benchmarked against SPY. Historical price data is pulled from two sources (Massive.com API and yfinance), stored in a local SQLite database, and read at runtime with no live API calls. Includes a Monte Carlo efficient frontier plotted across 2,500 random portfolio weight simulations, a pairwise correlation heatmap, and cumulative return curves, with a full dark/light mode toggle.',
+    stack: ['Python', 'Streamlit', 'Plotly', 'Finance APIs'],
     sourceCode: 'https://github.com/Ajaiah-D/portfolio-risk-analysis',
     livePreview: null
   },
