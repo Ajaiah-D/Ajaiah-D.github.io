@@ -55,7 +55,7 @@ export const projects = [
     livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/HealthcareClaimsAnalyticsDashboard_17777471179890/HealthcareClaims-Summary'
   },
   {
-    name: 'Soccer Media Benchmarking Dashboard',
+    name: 'Soccer Media Benchmarking Dashboar',
     description:
       'Built a data pipeline that ingests YouTube channel metrics via the YouTube Data API, stores them in BigQuery, transforms them with dbt, and visualizes them in a Streamlit dashboard. The key metric (views per subscriber) normalizes engagement across channels of different sizes, surfacing which soccer media outlets have audiences that actually watch. Full Python ETL with BigQuery, dbt staging/intermediate/marts layers, and a modern dashboard. All infrastructure stays within GCP\'s free tier.',
     stack: ['Python', 'BigQuery', 'dbt', 'Streamlit', 'GCP', 'ETL'],
