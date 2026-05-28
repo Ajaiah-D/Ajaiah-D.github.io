@@ -3,7 +3,7 @@ import resumePDF from './assets/ajaiahdarlington_resume_2026.pdf'
 
 export const about = {
   name: 'Ajaiah Darlington',
-  role: 'Systems Thinker. Data-Driven Builder.',
+  role: 'Data Analyst & Analytics Engineer',
   description:
     "I turn data into decisions. What drew me to analytics wasn't the math, it was what the math makes possible. In sports, in finance, in almost any system worth studying, the evidence tends to point the same direction: structure and consistency outperform cleverness over time. My work is about finding those patterns, understanding what drives outcomes, and translating that into decisions people can act on with confidence.",
   resume: resumePDF,
@@ -17,50 +17,59 @@ export const projects = [
   {
     name: 'Football Player Profiler',
     description:
-      'Built a cloud-backed football analytics app covering 7 seasons (2017–2024) of player data across Europe\'s Big 5 leagues. Scraped and cleaned ~14,000 player-season records from FBref, ran them through an automated ETL pipeline into Google Cloud Storage and BigQuery, and built a position-aware cosine similarity model to surface statistically comparable players. Deployed as an interactive Streamlit app with live BigQuery queries, percentile rankings by position, and filters by season, league, and club.',
-    stack: ['Python', 'Google Cloud Platform', 'BigQuery', 'Streamlit'],
+      'A cloud-backed football analytics app covering 7 seasons of player data across Europe\'s Big 5 leagues.',
+    stack: ['Python', 'pandas', 'NumPy', 'Google Cloud Storage', 'BigQuery', 'Streamlit'],
     sourceCode: 'https://github.com/M4G1C14N5/scouting-report',
     livePreview: null
   },
   {
-    name: 'Sleep Quality Prediction System',
+    name: 'Sleep Better',
     description:
-      'Engineered backend of a sleep analysis app that collects user input and predicts sleep efficiency. Built with FastAPI, PostgreSQL, and a Random Forest model.',
-    stack: ['FastAPI', 'PostgreSQL', 'Python'],
+      'A full-stack sleep quality app where users enter 10 personal metrics and receive a machine learning predicted sleep efficiency score, classified as Good or Poor.',
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Firebase', 'FastAPI', 'PostgreSQL', 'scikit-learn'],
     sourceCode: 'https://github.com/Ajaiah-D/HunterCapstoneSpring2025',
     livePreview: null
   },
   {
-    name: 'Portfolio Risk Analysis Tool',
+    name: 'Portfolio Risk Analysis Dashboard',
     description:
-      'Built an interactive investment risk dashboard where users select up to 25 S&P 500 stocks or ETFs and instantly see how their portfolio holds up on metrics like Sharpe ratio, Beta, Max Drawdown, and Value-at-Risk — all benchmarked against SPY. Historical price data is pulled from two sources (Massive.com API and yfinance), stored in a local SQLite database, and read at runtime with no live API calls. Includes a Monte Carlo efficient frontier plotted across 2,500 random portfolio weight simulations, a pairwise correlation heatmap, and cumulative return curves, with a full dark/light mode toggle.',
-    stack: ['Python', 'Streamlit', 'Plotly', 'Finance APIs'],
+      'An interactive risk analysis tool where users build a portfolio of up to 25 S&P 500 stocks or ETFs and see six risk metrics benchmarked against SPY.',
+    stack: ['Python', 'Streamlit', 'Plotly', 'pandas', 'NumPy', 'SQLite', 'Apache Airflow'],
     sourceCode: 'https://github.com/Ajaiah-D/portfolio-risk-analysis',
     livePreview: null
   },
   {
     name: 'Scouting Intelligence Pipeline & Dashboard',
     description:
-      'Built an end-to-end Python pipeline to identify undervalued footballers across Europe\'s Big 5 leagues. Merged FBref performance data with Transfermarkt valuations across 2,854 player-seasons, engineered a composite scoring model with position-specific weights, and visualised results in an interactive Tableau dashboard.',
-    stack: ['Python', 'Data Engineering', 'Sports Analytics', 'Tableau'],
+      'A Python pipeline that identifies undervalued footballers across Europe\'s Big 5 leagues by combining performance stats with market valuations.',
+    stack: ['Python', 'pandas', 'NumPy', 'Jupyter Notebooks', 'Tableau'],
     sourceCode: 'https://github.com/Ajaiah-D/DA-Course-Scouting-Intelligence-Pipeline-and-Dashboard',
     livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/ScoutingIntelligenceDashboard_17762156549180/Overview'
   },
   {
     name: 'Healthcare Claims Analytics',
     description:
-      'Analyzed three years of CMS synthetic Medicare data across ~116,000 beneficiaries to surface cost concentration, chronic condition comorbidities, and 30-day readmission patterns. Built a 6-notebook Python/SQLite pipeline producing pre-aggregated exports for a Tableau dashboard — key finding: patients with 11+ chronic conditions cost 137x more per year than those with none.',
-    stack: ['Python', 'Pandas', 'SQL', 'SQLite', 'Jupyter', 'Tableau'],
+      'An analytics pipeline built on CMS synthetic Medicare data covering 116,000 beneficiaries and $1.24 billion in tracked spend across three years.',
+    stack: ['Python', 'pandas', 'SQLite', 'Jupyter Notebooks', 'Tableau'],
     sourceCode: 'https://github.com/Ajaiah-D/Healthcare-Claims-Analytics',
     livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/HealthcareClaimsAnalyticsDashboard_17777471179890/HealthcareClaims-Summary'
   },
   {
-    name: 'Soccer Media Benchmarking Dashboar',
+    name: 'Soccer Media Benchmarking Dashboard',
     description:
-      'Built a data pipeline that ingests YouTube channel metrics via the YouTube Data API, stores them in BigQuery, transforms them with dbt, and visualizes them in a Streamlit dashboard. The key metric (views per subscriber) normalizes engagement across channels of different sizes, surfacing which soccer media outlets have audiences that actually watch. Full Python ETL with BigQuery, dbt staging/intermediate/marts layers, and a modern dashboard. All infrastructure stays within GCP\'s free tier.',
-    stack: ['Python', 'BigQuery', 'dbt', 'Streamlit', 'GCP', 'ETL'],
+      'A data pipeline that ingests daily YouTube statistics for five major soccer media outlets and surfaces which channels have audiences that actually watch.',
+    stack: ['Python', 'YouTube Data API', 'BigQuery', 'dbt', 'Streamlit', 'Plotly'],
     sourceCode: 'https://github.com/Ajaiah-D/soccer-media-benchmarking',
     livePreview: null
+  },
+  {
+    name: 'FRED Economic Indicators Pipeline',
+    description:
+      'A production-style data engineering pipeline that ingests six live macroeconomic indicators from the Federal Reserve on a daily schedule.',
+    stack: ['Python', 'Apache Airflow', 'PySpark', 'Databricks', 'AWS S3', 'dbt', 'Streamlit', 'Plotly'],
+    sourceCode: null,
+    livePreview: null,
+    inProgress: true
   }
 ]
 
