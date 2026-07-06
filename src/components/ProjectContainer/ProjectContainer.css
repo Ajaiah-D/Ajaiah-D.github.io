@@ -1,71 +1,105 @@
-.project-container {
-  background-color: var(--bg-panel);
-  border: 1px solid var(--border-color);
-  border-radius: 0.75rem;
-  padding: 1.75rem;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.project {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1rem;
+  padding: 2.75rem 0;
+  border-top: 1px solid var(--border-color);
 }
 
-.project-container:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.project-title {
-  font-size: 1.2rem;
-  color: var(--text-primary);
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-
-.project-subtitle {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-top: 0.25rem;
-  margin-bottom: 0.75rem;
-}
-
-.project-description {
-  font-size: 0.95rem;
-  color: var(--text-primary);
-  margin-top: 0.5rem;
-  line-height: 1.65;
-  opacity: 0.85;
-  white-space: pre-line;
-}
-
-.project-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 1.25rem 0;
-  padding: 0;
-  list-style: none;
-}
-
-.project-stack-item {
-  background-color: var(--highlight);
-  color: var(--text-accent);
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  font-size: 0.78rem;
+.project__index {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
   font-weight: 600;
-}
-
-.project-links {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-  margin-top: 1.25rem;
-}
-
-.link--icon svg {
-  font-size: 1.6rem;
   color: var(--text-secondary);
+  padding-top: 0.35rem;
   transition: color 0.2s ease;
 }
 
-.link--icon:hover svg {
+.project:hover .project__index {
   color: var(--text-accent);
+}
+
+.project__title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.project__title a {
+  transition: color 0.2s ease;
+}
+
+.project__title a:hover {
+  color: var(--text-accent);
+}
+
+.project__badge {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+  background-color: var(--pill-bg);
+  border: 1px solid var(--text-accent);
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+}
+
+.project__subtitle {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.project__description {
+  margin-top: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 720px;
+  line-height: 1.75;
+}
+
+.project__stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1.25rem 0 0;
+}
+
+.project__stack-item {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background-color: var(--pill-bg);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+}
+
+.project__links {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 640px) {
+  .project {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    padding: 2.25rem 0;
+  }
+
+  .project__index {
+    padding-top: 0;
+    font-size: 0.95rem;
+  }
 }

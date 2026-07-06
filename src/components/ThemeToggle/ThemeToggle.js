@@ -7,9 +7,12 @@ const ThemeToggle = () => {
   const [theme, setTheme] = useState('light')
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light'
+    const urlTheme = new URLSearchParams(window.location.search).get('theme')
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const savedTheme =
+      urlTheme || localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light')
     document.documentElement.setAttribute('data-theme', savedTheme)
-    setTheme(savedTheme)  // ← This is what you were missing
+    setTheme(savedTheme)
   }, [])
 
   const toggleTheme = () => {

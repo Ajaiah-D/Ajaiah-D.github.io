@@ -1,7 +1,7 @@
 import React from 'react'
-import uniqid from 'uniqid'
 import { projects } from '../../portfolio'
 import ProjectContainer from '../ProjectContainer/ProjectContainer'
+import Reveal from '../Reveal/Reveal'
 import './Projects.css'
 
 const Projects = () => {
@@ -9,11 +9,17 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section projects">
-      <h2 className="section__title">Projects</h2>
+      <Reveal>
+        <h2 className="section__title">
+          <span className="section__title-number">02.</span> Projects
+        </h2>
+      </Reveal>
 
-      <div className="projects__grid">
-        {projects.map((project) => (
-          <ProjectContainer key={uniqid()} project={project} />
+      <div className="projects__list">
+        {projects.map((project, index) => (
+          <Reveal key={project.name}>
+            <ProjectContainer project={project} index={index} />
+          </Reveal>
         ))}
       </div>
     </section>
