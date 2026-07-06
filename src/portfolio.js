@@ -3,7 +3,7 @@ import resumePDF from './assets/ajaiahdarlington_resume_2026.pdf'
 
 export const about = {
   name: 'Ajaiah Darlington',
-  role: 'Data Scientist',
+  role: 'Analytics Engineer',
   description:
     "I believe the best outcomes come from having as much information as possible, avoiding unnecessary risk, and applying real domain knowledge without wasting effort getting there. That philosophy led me to data. I use my technical skills to build pipelines, models, and systems that apply this thinking to real problems, in healthcare, finance, and sports, turning raw information into something people can act on with confidence.",
   resume: resumePDF,
@@ -15,14 +15,6 @@ export const about = {
 
 export const projects = [
   {
-    name: 'Football Player Profiler',
-    description:
-      'A cloud-backed football analytics platform covering ~14,000 player-season records across 7 seasons of Europe\'s Big 5 leagues. Search any player to see percentile rankings by position group and find the most statistically similar players via a cosine-similarity model on per-90 stats, served live from a 3-layer BigQuery warehouse.',
-    stack: ['Python', 'pandas', 'BeautifulSoup', 'BigQuery', 'Google Cloud Storage', 'Streamlit', 'Docker'],
-    sourceCode: 'https://github.com/M4G1C14N5/scouting-report',
-    livePreview: null
-  },
-  {
     name: 'Kroos — Local AI Assistant',
     description:
       'A personal AI assistant that runs entirely on my own machine: a local LLM through Ollama with Discord as the interface, so nothing leaves my computer. Since local models lack native tool calling, I built a system that parses structured actions out of plain-text replies and executes them deterministically — task reminders, Google Calendar sync, daily market and sports briefings, and z-score anomaly detection that flags unusual market moves against each ticker\'s own history.',
@@ -31,11 +23,11 @@ export const projects = [
     livePreview: null
   },
   {
-    name: 'Sleep Better',
+    name: 'Basketball Intelligence Platform',
     description:
-      'A full-stack sleep quality app where users enter 10 personal metrics and receive a machine learning predicted sleep efficiency score, classified as Good or Poor. The React frontend is deployed on Render and talks to a FastAPI backend that verifies Firebase auth and saves every prediction to PostgreSQL.',
-    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Firebase', 'FastAPI', 'PostgreSQL', 'scikit-learn'],
-    sourceCode: 'https://github.com/Ajaiah-D/HunterCapstoneSpring2025',
+      'A local-first NBA analytics platform that backfilled 47 seasons — roughly 1.09M player-game rows — from the NBA stats API through a rate-limited ingestion client into a DuckDB warehouse, modeled with dbt and served through a FotMob-style Streamlit dashboard with trivia mini-games and a password-gated SQL workbench.',
+    stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'Docker'],
+    sourceCode: 'https://github.com/Ajaiah-D/basketball-intelligence-platform',
     livePreview: null
   },
   {
@@ -47,14 +39,6 @@ export const projects = [
     livePreview: null
   },
   {
-    name: 'Scouting Intelligence Pipeline & Dashboard',
-    description:
-      'A 5-stage Python pipeline that surfaces undervalued footballers across Europe\'s Big 5 leagues by merging FBref performance stats with Transfermarkt market valuations. Two-pass exact-then-fuzzy name matching joined 94.9% of 3,008 player-seasons; a position-weighted scoring model divides performance by market value to rank targets in a Tableau dashboard.',
-    stack: ['Python', 'pandas', 'NumPy', 'fuzzywuzzy', 'Jupyter Notebooks', 'Tableau'],
-    sourceCode: 'https://github.com/Ajaiah-D/DA-Course-Scouting-Intelligence-Pipeline-and-Dashboard',
-    livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/ScoutingIntelligenceDashboard_17762156549180/Overview'
-  },
-  {
     name: 'Healthcare Claims Analytics',
     description:
       'An analytics pipeline on CMS synthetic Medicare data covering 116,000 beneficiaries across three years, spanning a 5.5M-row prescription events file. Six sequential notebooks detect 30-day hospital readmissions, quantify per-condition cost impact, and pre-aggregate 14 export tables so the Tableau dashboard stays fast and the logic stays auditable.',
@@ -63,12 +47,29 @@ export const projects = [
     livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/HealthcareClaimsAnalyticsDashboard_17777471179890/HealthcareClaims-Summary'
   },
   {
-    name: 'Basketball Intelligence Platform',
+    name: 'FRED Economic Indicators Pipeline',
     description:
-      'A local-first NBA analytics platform that backfilled 47 seasons — roughly 1.09M player-game rows — from the NBA stats API through a rate-limited ingestion client into a DuckDB warehouse, modeled with dbt and served through a FotMob-style Streamlit dashboard with trivia mini-games and a password-gated SQL workbench.',
-    stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'Docker'],
-    sourceCode: 'https://github.com/Ajaiah-D/basketball-intelligence-platform',
+      'An end-to-end data engineering pipeline ingesting six macroeconomic indicators from the Federal Reserve\'s FRED API: Airflow orchestrates daily ingestion to S3 with retries, PySpark computes rolling features into Parquet, and a three-layer dbt model derives a 0–6 recession-watch signal score surfaced in a Streamlit dashboard.',
+    stack: ['Python', 'Apache Airflow', 'PySpark', 'AWS S3', 'dbt', 'DuckDB', 'Streamlit', 'Plotly'],
+    sourceCode: 'https://github.com/Ajaiah-D/Economic-Indicators-Pipeline',
+    livePreview: null,
+    inProgress: true
+  },
+  {
+    name: 'Football Player Profiler',
+    description:
+      'A cloud-backed football analytics platform covering ~14,000 player-season records across 7 seasons of Europe\'s Big 5 leagues. Search any player to see percentile rankings by position group and find the most statistically similar players via a cosine-similarity model on per-90 stats, served live from a 3-layer BigQuery warehouse.',
+    stack: ['Python', 'pandas', 'BeautifulSoup', 'BigQuery', 'Google Cloud Storage', 'Streamlit', 'Docker'],
+    sourceCode: 'https://github.com/M4G1C14N5/scouting-report',
     livePreview: null
+  },
+  {
+    name: 'Scouting Intelligence Pipeline & Dashboard',
+    description:
+      'A 5-stage Python pipeline that surfaces undervalued footballers across Europe\'s Big 5 leagues by merging FBref performance stats with Transfermarkt market valuations. Two-pass exact-then-fuzzy name matching joined 94.9% of 3,008 player-seasons; a position-weighted scoring model divides performance by market value to rank targets in a Tableau dashboard.',
+    stack: ['Python', 'pandas', 'NumPy', 'fuzzywuzzy', 'Jupyter Notebooks', 'Tableau'],
+    sourceCode: 'https://github.com/Ajaiah-D/DA-Course-Scouting-Intelligence-Pipeline-and-Dashboard',
+    livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/ScoutingIntelligenceDashboard_17762156549180/Overview'
   },
   {
     name: 'Options Strategy Research',
@@ -87,13 +88,12 @@ export const projects = [
     livePreview: null
   },
   {
-    name: 'FRED Economic Indicators Pipeline',
+    name: 'Sleep Better',
     description:
-      'An end-to-end data engineering pipeline ingesting six macroeconomic indicators from the Federal Reserve\'s FRED API: Airflow orchestrates daily ingestion to S3 with retries, PySpark computes rolling features into Parquet, and a three-layer dbt model derives a 0–6 recession-watch signal score surfaced in a Streamlit dashboard.',
-    stack: ['Python', 'Apache Airflow', 'PySpark', 'AWS S3', 'dbt', 'DuckDB', 'Streamlit', 'Plotly'],
-    sourceCode: 'https://github.com/Ajaiah-D/Economic-Indicators-Pipeline',
-    livePreview: null,
-    inProgress: true
+      'A full-stack sleep quality app where users enter 10 personal metrics and receive a machine learning predicted sleep efficiency score, classified as Good or Poor. The React frontend is deployed on Render and talks to a FastAPI backend that verifies Firebase auth and saves every prediction to PostgreSQL.',
+    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Firebase', 'FastAPI', 'PostgreSQL', 'scikit-learn'],
+    sourceCode: 'https://github.com/Ajaiah-D/HunterCapstoneSpring2025',
+    livePreview: null
   }
 ]
 
