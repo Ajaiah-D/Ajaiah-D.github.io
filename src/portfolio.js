@@ -108,5 +108,5 @@ export const certificates = [
 ]
 
 export const contact = {
-  email: 'your.email@example.com',
+  email: 'ajaiahdarlington07@gmail.com',
 }
