@@ -1,11 +1,4 @@
-.projects {
-  background-color: var(--bg-main);
-}
-
-.projects__grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  gap: 1.5rem;
+.projects__list {
+  display: flex;
+  flex-direction: column;
 }
