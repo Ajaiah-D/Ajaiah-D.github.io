@@ -1,11 +1,11 @@
 import courseraLogo from './assets/certificates/Coursera.png'
-import resumePDF from './assets/AjaiahDarlington_Resume_v6.pdf'
+import resumePDF from './assets/ajaiahdarlington_resume_2026.pdf'
 
 export const about = {
   name: 'Ajaiah Darlington',
-  role: 'Systems Thinker. Data-Driven Builder.',
+  role: 'Data Scientist',
   description:
-    "I turn data into decisions. What drew me to analytics wasn't the math, it was what the math makes possible. In sports, in finance, in almost any system worth studying, the evidence tends to point the same direction: structure and consistency outperform cleverness over time. My work is about finding those patterns, understanding what drives outcomes, and translating that into decisions people can act on with confidence.",
+    "I believe the best outcomes come from having as much information as possible, avoiding unnecessary risk, and applying real domain knowledge without wasting effort getting there. That philosophy led me to data. I use my technical skills to build pipelines, models, and systems that apply this thinking to real problems, in healthcare, finance, and sports, turning raw information into something people can act on with confidence.",
   resume: resumePDF,
   social: {
     github: 'https://github.com/Ajaiah-D',
@@ -15,28 +15,85 @@ export const about = {
 
 export const projects = [
   {
-    name: 'Player Performance Modeling',
+    name: 'Football Player Profiler',
     description:
-      'Built a classification model to predict TOTY nominees using multi-season performance data. Used Random Forest with feature engineering and tuning; achieved AUC >90%.',
-    stack: ['Python', 'Scikit-learn', 'Pandas'],
-    sourceCode: 'https://github.com/Ajaiah-D/TOTY-Prediction',
+      'A cloud-backed football analytics platform covering ~14,000 player-season records across 7 seasons of Europe\'s Big 5 leagues. Search any player to see percentile rankings by position group and find the most statistically similar players via a cosine-similarity model on per-90 stats, served live from a 3-layer BigQuery warehouse.',
+    stack: ['Python', 'pandas', 'BeautifulSoup', 'BigQuery', 'Google Cloud Storage', 'Streamlit', 'Docker'],
+    sourceCode: 'https://github.com/M4G1C14N5/scouting-report',
     livePreview: null
   },
   {
-    name: 'Sleep Quality Prediction System',
+    name: 'Kroos — Local AI Assistant',
     description:
-      'Engineered backend of a sleep analysis app that collects user input and predicts sleep efficiency. Built with FastAPI, PostgreSQL, and a Random Forest model.',
-    stack: ['FastAPI', 'PostgreSQL', 'Python'],
-    sourceCode: 'https://github.com/Ajaiah-D/sleep-predictor',
+      'A personal AI assistant that runs entirely on my own machine: a local LLM through Ollama with Discord as the interface, so nothing leaves my computer. Since local models lack native tool calling, I built a system that parses structured actions out of plain-text replies and executes them deterministically — task reminders, Google Calendar sync, daily market and sports briefings, and z-score anomaly detection that flags unusual market moves against each ticker\'s own history.',
+    stack: ['Python', 'Ollama', 'Gemma 3', 'Discord.py', 'SQLite', 'APScheduler', 'yfinance', 'Google Calendar API'],
+    sourceCode: null,
     livePreview: null
   },
   {
-    name: 'Portfolio Risk Analysis Tool',
+    name: 'Sleep Better',
     description:
-      'Built a tool to retrieve financial data, compute asset correlations and beta, and simulate risk-optimized portfolios using efficient frontier modeling.',
-    stack: ['Python', 'Matplotlib', 'Finance APIs'],
-    sourceCode: 'https://github.com/Ajaiah-D/portfolio-risk-analysis',
+      'A full-stack sleep quality app where users enter 10 personal metrics and receive a machine learning predicted sleep efficiency score, classified as Good or Poor. The React frontend is deployed on Render and talks to a FastAPI backend that verifies Firebase auth and saves every prediction to PostgreSQL.',
+    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Firebase', 'FastAPI', 'PostgreSQL', 'scikit-learn'],
+    sourceCode: 'https://github.com/Ajaiah-D/HunterCapstoneSpring2025',
     livePreview: null
+  },
+  {
+    name: 'Portfolio Risk Analysis Dashboard',
+    description:
+      'A 6-tab interactive dashboard where users build a portfolio of S&P 500 stocks or ETFs and see risk and return metrics — Sharpe, Sortino, Beta, VaR/CVaR, max drawdown — benchmarked against SPY, with plain-English explanations for people new to finance. Tested at three levels with pytest, including headless end-to-end runs of the real app.',
+    stack: ['Python', 'Streamlit', 'Plotly', 'pandas', 'NumPy', 'SQLite', 'pytest'],
+    sourceCode: 'https://github.com/Ajaiah-D/Portfolio-Risk-Analysis',
+    livePreview: null
+  },
+  {
+    name: 'Scouting Intelligence Pipeline & Dashboard',
+    description:
+      'A 5-stage Python pipeline that surfaces undervalued footballers across Europe\'s Big 5 leagues by merging FBref performance stats with Transfermarkt market valuations. Two-pass exact-then-fuzzy name matching joined 94.9% of 3,008 player-seasons; a position-weighted scoring model divides performance by market value to rank targets in a Tableau dashboard.',
+    stack: ['Python', 'pandas', 'NumPy', 'fuzzywuzzy', 'Jupyter Notebooks', 'Tableau'],
+    sourceCode: 'https://github.com/Ajaiah-D/DA-Course-Scouting-Intelligence-Pipeline-and-Dashboard',
+    livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/ScoutingIntelligenceDashboard_17762156549180/Overview'
+  },
+  {
+    name: 'Healthcare Claims Analytics',
+    description:
+      'An analytics pipeline on CMS synthetic Medicare data covering 116,000 beneficiaries across three years, spanning a 5.5M-row prescription events file. Six sequential notebooks detect 30-day hospital readmissions, quantify per-condition cost impact, and pre-aggregate 14 export tables so the Tableau dashboard stays fast and the logic stays auditable.',
+    stack: ['Python', 'pandas', 'SQLite', 'Jupyter Notebooks', 'Tableau'],
+    sourceCode: 'https://github.com/Ajaiah-D/Healthcare-Claims-Analytics',
+    livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/HealthcareClaimsAnalyticsDashboard_17777471179890/HealthcareClaims-Summary'
+  },
+  {
+    name: 'Basketball Intelligence Platform',
+    description:
+      'A local-first NBA analytics platform that backfilled 47 seasons — roughly 1.09M player-game rows — from the NBA stats API through a rate-limited ingestion client into a DuckDB warehouse, modeled with dbt and served through a FotMob-style Streamlit dashboard with trivia mini-games and a password-gated SQL workbench.',
+    stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'Docker'],
+    sourceCode: 'https://github.com/Ajaiah-D/basketball-intelligence-platform',
+    livePreview: null
+  },
+  {
+    name: 'Options Strategy Research',
+    description:
+      'A version-controlled research project tracking five iterations of an options mean-reversion strategy backtested on QuantConnect\'s LEAN engine. A signal study across 1,371 dip/rally events in 10 ETFs quantified a 58–62% hit rate on 2-sigma dips and shaped the final long-only dip buyer using bull call spreads across a 7-ticker ETF basket.',
+    stack: ['Python', 'QuantConnect LEAN', 'QCAlgorithm', 'Git'],
+    sourceCode: null,
+    livePreview: null
+  },
+  {
+    name: 'Soccer Media Benchmarking Dashboard',
+    description:
+      'An ELT pipeline that ingests daily YouTube statistics for five major soccer media outlets and ranks channels by views-per-subscriber, so a smaller channel that actually gets watched can outrank a bigger one. Raw snapshots land in BigQuery and flow through a three-layer dbt model into a cached Streamlit dashboard.',
+    stack: ['Python', 'YouTube Data API', 'BigQuery', 'dbt', 'Streamlit', 'Plotly'],
+    sourceCode: 'https://github.com/Ajaiah-D/soccer-media-benchmarking',
+    livePreview: null
+  },
+  {
+    name: 'FRED Economic Indicators Pipeline',
+    description:
+      'An end-to-end data engineering pipeline ingesting six macroeconomic indicators from the Federal Reserve\'s FRED API: Airflow orchestrates daily ingestion to S3 with retries, PySpark computes rolling features into Parquet, and a three-layer dbt model derives a 0–6 recession-watch signal score surfaced in a Streamlit dashboard.',
+    stack: ['Python', 'Apache Airflow', 'PySpark', 'AWS S3', 'dbt', 'DuckDB', 'Streamlit', 'Plotly'],
+    sourceCode: 'https://github.com/Ajaiah-D/Economic-Indicators-Pipeline',
+    livePreview: null,
+    inProgress: true
   }
 ]
 
@@ -75,5 +132,5 @@ export const certificates = [
 ]
 
 export const contact = {
-  email: 'your.email@example.com',
+  email: 'ajaiahdarlington07@gmail.com',
 }

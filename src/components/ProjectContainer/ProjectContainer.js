@@ -1,32 +1,43 @@
 import React from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import LaunchIcon from '@mui/icons-material/Launch'
-import uniqid from 'uniqid'
 import './ProjectContainer.css'
 
-const ProjectContainer = ({ project }) => {
-  const { name, subtitle, description, stack, sourceCode, livePreview } = project
+const ProjectContainer = ({ project, index }) => {
+  const { name, subtitle, description, stack, sourceCode, livePreview, inProgress } = project
+  const primaryLink = livePreview || sourceCode
 
   return (
-    <div className="project-container">
-      <div className="project-content">
-        <h3 className="project-title">{name}</h3>
-        {subtitle && <h4 className="project-subtitle">{subtitle}</h4>}
+    <article className="project">
+      <span className="project__index">{String(index + 1).padStart(2, '0')}</span>
 
-        <p className="project-description">{description}</p>
+      <div className="project__body">
+        <h3 className="project__title">
+          {primaryLink ? (
+            <a href={primaryLink} target="_blank" rel="noopener noreferrer">
+              {name}
+            </a>
+          ) : (
+            name
+          )}
+          {inProgress && <span className="project__badge">In Progress</span>}
+        </h3>
+
+        {subtitle && <h4 className="project__subtitle">{subtitle}</h4>}
+
+        <p className="project__description">{description}</p>
 
         {stack && (
-          <ul className="project-stack">
+          <ul className="project__stack">
             {stack.map((tech) => (
-              <li key={uniqid()} className="project-stack-item">
+              <li key={tech} className="project__stack-item">
                 {tech}
               </li>
             ))}
           </ul>
         )}
 
-        <div className="project-links">
+        <div className="project__links">
           {sourceCode && (
             <a
               href={sourceCode}
@@ -38,7 +49,6 @@ const ProjectContainer = ({ project }) => {
               <GitHubIcon />
             </a>
           )}
-
           {livePreview && (
             <a
               href={livePreview}
@@ -52,7 +62,7 @@ const ProjectContainer = ({ project }) => {
           )}
         </div>
       </div>
-    </div>
+    </article>
   )
 }
 
