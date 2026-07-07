@@ -1,5 +1,5 @@
 import courseraLogo from './assets/certificates/Coursera.png'
-import resumePDF from './assets/ajaiahdarlington_resume_2026.pdf'
+import resumePDF from './assets/certificates/Ajaiah_Darlington_2026.pdf'
 
 export const about = {
   name: 'Ajaiah Darlington',
