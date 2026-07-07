@@ -15,9 +15,9 @@ export const about = {
 
 export const projects = [
   {
-    name: 'Kroos — Local AI Assistant',
+    name: 'Kroos: Local AI Assistant',
     description:
-      'A personal AI assistant that runs entirely on my own machine: a local LLM through Ollama with Discord as the interface, so nothing leaves my computer. Since local models lack native tool calling, I built a system that parses structured actions out of plain-text replies and executes them deterministically — task reminders, Google Calendar sync, daily market and sports briefings, and z-score anomaly detection that flags unusual market moves against each ticker\'s own history.',
+      'A personal AI assistant that runs entirely on my own machine: a local LLM through Ollama with Discord as the interface, so nothing leaves my computer. Since local models lack native tool calling, I built a system that parses structured actions out of plain-text replies and executes them deterministically, including task reminders, Google Calendar sync, daily market and sports briefings, and z-score anomaly detection that flags unusual market moves against each ticker\'s own history.',
     stack: ['Python', 'Ollama', 'Gemma 3', 'Discord.py', 'SQLite', 'APScheduler', 'yfinance', 'Google Calendar API'],
     sourceCode: null,
     livePreview: null
@@ -25,7 +25,7 @@ export const projects = [
   {
     name: 'Basketball Intelligence Platform',
     description:
-      'A local-first NBA analytics platform that backfilled 47 seasons — roughly 1.09M player-game rows — from the NBA stats API through a rate-limited ingestion client into a DuckDB warehouse, modeled with dbt and served through a FotMob-style Streamlit dashboard with trivia mini-games and a password-gated SQL workbench.',
+      'A local-first NBA analytics platform that backfilled 47 seasons (roughly 1.09M player-game rows) from the NBA stats API through a rate-limited ingestion client into a DuckDB warehouse, modeled with dbt and served through a FotMob-style Streamlit dashboard with trivia mini-games and a password-gated SQL workbench.',
     stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'Docker'],
     sourceCode: 'https://github.com/Ajaiah-D/basketball-intelligence-platform',
     livePreview: null
@@ -33,7 +33,7 @@ export const projects = [
   {
     name: 'Portfolio Risk Analysis Dashboard',
     description:
-      'A 6-tab interactive dashboard where users build a portfolio of S&P 500 stocks or ETFs and see risk and return metrics — Sharpe, Sortino, Beta, VaR/CVaR, max drawdown — benchmarked against SPY, with plain-English explanations for people new to finance. Tested at three levels with pytest, including headless end-to-end runs of the real app.',
+      'A 6-tab interactive dashboard where users build a portfolio of S&P 500 stocks or ETFs and see risk and return metrics (Sharpe, Sortino, Beta, VaR/CVaR, max drawdown) benchmarked against SPY, with plain-English explanations for people new to finance. Tested at three levels with pytest, including headless end-to-end runs of the real app.',
     stack: ['Python', 'Streamlit', 'Plotly', 'pandas', 'NumPy', 'SQLite', 'pytest'],
     sourceCode: 'https://github.com/Ajaiah-D/Portfolio-Risk-Analysis',
     livePreview: null
