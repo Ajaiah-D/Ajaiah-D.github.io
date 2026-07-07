@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.959b9368.css",
-    "main.js": "/static/js/main.e428c180.js",
-    "static/media/Ajaiah_Darlington_2026.pdf": "/static/media/Ajaiah_Darlington_2026.9b31938292d8ec87c8bb.pdf",
+    "main.js": "/static/js/main.8cf0f8ac.js",
+    "static/media/Ajaiah_Darlington_2026.pdf": "/static/media/Ajaiah_Darlington_2026.d1412694cae6b75eb50f.pdf",
     "static/media/Coursera.png": "/static/media/Coursera.76bb0eb581ac4f118ca8.png",
     "index.html": "/index.html",
     "main.959b9368.css.map": "/static/css/main.959b9368.css.map",
-    "main.e428c180.js.map": "/static/js/main.e428c180.js.map"
+    "main.8cf0f8ac.js.map": "/static/js/main.8cf0f8ac.js.map"
   },
   "entrypoints": [
     "static/css/main.959b9368.css",
-    "static/js/main.e428c180.js"
+    "static/js/main.8cf0f8ac.js"
   ]
 }
