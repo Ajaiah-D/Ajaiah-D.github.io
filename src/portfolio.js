@@ -49,8 +49,8 @@ export const projects = [
   {
     name: 'FRED Economic Indicators Pipeline',
     description:
-      'An end-to-end data engineering pipeline ingesting six macroeconomic indicators from the Federal Reserve\'s FRED API: Airflow orchestrates daily ingestion to S3 with retries, PySpark computes rolling features into Parquet, and a three-layer dbt model derives a 0–6 recession-watch signal score surfaced in a Streamlit dashboard.',
-    stack: ['Python', 'Apache Airflow', 'PySpark', 'AWS S3', 'dbt', 'DuckDB', 'Streamlit', 'Plotly'],
+      'An end-to-end economic data pipeline ingesting six Federal Reserve indicators (CPI, unemployment, GDP, fed funds rate, housing starts, consumer sentiment) through a FRED API to S3 to Airflow to dbt to Streamlit stack, with a rules-based recession signal score derived from historical 2008 and 2020 conditions. Handled a mid-project platform change by diagnosing new constraints and implementing an equivalent pandas transform rather than forcing an oversized tool onto a small dataset. Shipped a custom Streamlit dashboard with an accessibility-checked color system, interactive charts, and a plain-language glossary of what each indicator means.',
+    stack: ['Python', 'Apache Airflow', 'pandas', 'AWS S3', 'dbt', 'DuckDB', 'Streamlit', 'Plotly'],
     sourceCode: 'https://github.com/Ajaiah-D/Economic-Indicators-Pipeline',
     livePreview: null,
     inProgress: true
