@@ -28,7 +28,7 @@ export const projects = [
       'A local-first NBA analytics platform that backfilled 47 seasons (roughly 1.09M player-game rows) from the NBA stats API through a rate-limited ingestion client into a DuckDB warehouse, modeled with dbt and served through a FotMob-style Streamlit dashboard with trivia mini-games and a password-gated SQL workbench.',
     stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'Docker'],
     sourceCode: 'https://github.com/Ajaiah-D/basketball-intelligence-platform',
-    livePreview: null
+    livePreview: 'https://basketball-intelligence-platform-swbwhpr8numf57yyrar22w.streamlit.app/players'
   },
   {
     name: 'Portfolio Risk Analysis Dashboard',
