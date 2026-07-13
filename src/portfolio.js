@@ -56,6 +56,22 @@ export const projects = [
     inProgress: true
   },
   {
+    name: 'Soccer Player Tracking & Formation Analysis',
+    description:
+      'A computer vision pipeline that turns a broadcast soccer clip into per-player tracking data, team assignments, and a formation estimate for each phase of possession. YOLOv8 detection and ByteTrack keep player IDs stable across frames, K-means jersey clustering assigns teams, and a RANSAC-composed optical-flow homography compensates for camera pan and zoom before the Hungarian algorithm matches average player positions against formation templates. On a 30-second test clip: 20 players tracked per frame on average, correct team assignment on every spot-checked track, and homography that holds to under a meter near the calibration frame but drifts several meters by the far end of the clip.',
+    stack: ['Python', 'YOLOv8', 'ByteTrack', 'OpenCV', 'K-means', 'RANSAC', 'Hungarian Algorithm'],
+    sourceCode: 'https://github.com/Ajaiah-D/player-tracking',
+    livePreview: null
+  },
+  {
+    name: 'Cross-League Player Value Translation Engine',
+    description:
+      'A five-phase pipeline estimating how player performance translates between soccer leagues (MLS, USL tiers, NWSL, and comparison leagues), calibrated from players who actually moved between leagues. Ingests data from American Soccer Analysis and FBref, fuzzy-matches player identities across sources, isolates qualifying mover seasons, and derives shrinkage-adjusted league conversion factors via weighted least squares with bootstrap confidence intervals. Held-out movers are re-projected using factors trained without them and checked against a permutation baseline before a signal/no-signal verdict is called.',
+    stack: ['Python', 'pandas', 'NumPy', 'uv', 'pytest', 'fuzzy matching', 'bootstrap statistics'],
+    sourceCode: 'https://github.com/Ajaiah-D/soccer-translation',
+    livePreview: null
+  },
+  {
     name: 'Football Player Profiler',
     description:
       'A cloud-backed football analytics platform covering ~14,000 player-season records across 7 seasons of Europe\'s Big 5 leagues. Search any player to see percentile rankings by position group and find the most statistically similar players via a cosine-similarity model on per-90 stats, served live from a 3-layer BigQuery warehouse.',
