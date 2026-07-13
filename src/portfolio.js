@@ -36,7 +36,7 @@ export const projects = [
       'A 6-tab interactive dashboard where users build a portfolio of S&P 500 stocks or ETFs and see risk and return metrics (Sharpe, Sortino, Beta, VaR/CVaR, max drawdown) benchmarked against SPY, with plain-English explanations for people new to finance. Tested at three levels with pytest, including headless end-to-end runs of the real app.',
     stack: ['Python', 'Streamlit', 'Plotly', 'pandas', 'NumPy', 'SQLite', 'pytest'],
     sourceCode: 'https://github.com/Ajaiah-D/Portfolio-Risk-Analysis',
-    livePreview: null
+    livePreview: 'https://ajaiah-d-portfolio-risk--streamlit-appportfolio-analyzer-ij9gqb.streamlit.app/'
   },
   {
     name: 'Healthcare Claims Analytics',
