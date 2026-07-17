@@ -1,5 +1,5 @@
 import courseraLogo from './assets/certificates/Coursera.png'
-import resumePDF from './assets/certificates/Ajaiah_Darlington_2026.pdf'
+import resumePDF from './assets/certificates/Ajaiah_Darlington_Resume_2026.pdf'
 
 export const about = {
   name: 'Ajaiah Darlington',
@@ -52,8 +52,7 @@ export const projects = [
       'An end-to-end economic data pipeline ingesting six Federal Reserve indicators (CPI, unemployment, GDP, fed funds rate, housing starts, consumer sentiment) through a FRED API to S3 to Airflow to dbt to Streamlit stack, with a rules-based recession signal score derived from historical 2008 and 2020 conditions. Handled a mid-project platform change by diagnosing new constraints and implementing an equivalent pandas transform rather than forcing an oversized tool onto a small dataset. Shipped a custom Streamlit dashboard with an accessibility-checked color system, interactive charts, and a plain-language glossary of what each indicator means.',
     stack: ['Python', 'Apache Airflow', 'pandas', 'AWS S3', 'dbt', 'DuckDB', 'Streamlit', 'Plotly'],
     sourceCode: 'https://github.com/Ajaiah-D/Economic-Indicators-Pipeline',
-    livePreview: null,
-    inProgress: true
+    livePreview: 'https://ajaiah-d-economic-indicators-pipeline-dashboardapp-d8tih5.streamlit.app/'
   },
   {
     name: 'Soccer Player Tracking & Formation Analysis',
