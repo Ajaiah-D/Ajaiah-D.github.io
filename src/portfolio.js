@@ -3,7 +3,7 @@ import resumePDF from './assets/certificates/Ajaiah_Darlington_Resume_2026.pdf'
 
 export const about = {
   name: 'Ajaiah Darlington',
-  role: 'Analytics Engineer',
+  role: 'Data Analyst & Analytics Engineer',
   description:
     "I believe the best outcomes come from having as much information as possible, avoiding unnecessary risk, and applying real domain knowledge without wasting effort getting there. That philosophy led me to data. I use my technical skills to build pipelines, models, and systems that apply this thinking to real problems, in healthcare, finance, and sports, turning raw information into something people can act on with confidence.",
   resume: resumePDF,
