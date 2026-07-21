@@ -33,8 +33,8 @@ export const projects = [
   {
     name: 'Portfolio Risk Analysis Dashboard',
     description:
-      'A 6-tab interactive dashboard where users build a portfolio of S&P 500 stocks or ETFs and see risk and return metrics (Sharpe, Sortino, Beta, VaR/CVaR, max drawdown) benchmarked against SPY, with plain-English explanations for people new to finance. Tested at three levels with pytest, including headless end-to-end runs of the real app.',
-    stack: ['Python', 'Streamlit', 'Plotly', 'pandas', 'NumPy', 'SQLite', 'pytest'],
+      'A 6-tab interactive dashboard where users build a real dollar-weighted portfolio from 500+ S&P 500 stocks and ETFs and see risk and return metrics (Sharpe, Sortino, Beta, VaR/CVaR, max drawdown) benchmarked against SPY, plus a Dirichlet-sampled efficient frontier optimizer and Monte Carlo return projections. Price data refreshes daily through GitHub Actions, and the app is tested at three levels with pytest, including headless end-to-end runs of the real app.',
+    stack: ['Python', 'Streamlit', 'Plotly', 'pandas', 'NumPy', 'SQLite', 'GitHub Actions', 'pytest'],
     sourceCode: 'https://github.com/Ajaiah-D/Portfolio-Risk-Analysis',
     livePreview: 'https://ajaiah-d-portfolio-risk--streamlit-appportfolio-analyzer-ij9gqb.streamlit.app/'
   },
@@ -49,7 +49,7 @@ export const projects = [
   {
     name: 'FRED Economic Indicators Pipeline',
     description:
-      'An end-to-end economic data pipeline ingesting six Federal Reserve indicators (CPI, unemployment, GDP, fed funds rate, housing starts, consumer sentiment) through a FRED API to S3 to Airflow to dbt to Streamlit stack, with a rules-based recession signal score derived from historical 2008 and 2020 conditions. Handled a mid-project platform change by diagnosing new constraints and implementing an equivalent pandas transform rather than forcing an oversized tool onto a small dataset. Shipped a custom Streamlit dashboard with an accessibility-checked color system, interactive charts, and a plain-language glossary of what each indicator means.',
+      'An end-to-end pipeline over 160+ Federal Reserve series: national indicators feeding a recession-risk signal backtested against all 9 NBER recessions since 1959, state-level unemployment, house prices, and income for all 50 states plus DC, and ALFRED vintage data that reconstructs what the economy looked like on any past date versus what\'s known now. Airflow orchestrates ingestion to S3, dbt builds the marts, and a three-page Streamlit dashboard writes its own monthly briefing from the data, refreshed daily through GitHub Actions.',
     stack: ['Python', 'Apache Airflow', 'pandas', 'AWS S3', 'dbt', 'DuckDB', 'Streamlit', 'Plotly'],
     sourceCode: 'https://github.com/Ajaiah-D/Economic-Indicators-Pipeline',
     livePreview: 'https://ajaiah-d-economic-indicators-pipeline-dashboardapp-d8tih5.streamlit.app/'
