@@ -9,15 +9,15 @@ const Contact = () => {
   return (
     <section id="contact" className="section contact">
       <Reveal>
-        <p className="contact__eyebrow">04. What&apos;s next?</p>
-        <h2 className="contact__title">Let&apos;s work together.</h2>
+        <p className="contact__eyebrow">Contact</p>
+        <h2 className="contact__title">Get in touch.</h2>
         <p className="contact__text">
-          I&apos;m currently open to data analyst and analytics engineering
-          opportunities. Whether you have a role in mind, a question about my
-          work, or just want to say hi, my inbox is always open.
+          I&apos;m open to data analyst and analytics engineering roles. If
+          you&apos;re hiring, have a question about one of these projects, or
+          just want to talk data, email is the fastest way to reach me.
         </p>
         <a href={`mailto:${contact.email}`} className="btn contact__btn">
-          Say hello
+          Email me
         </a>
       </Reveal>
     </section>

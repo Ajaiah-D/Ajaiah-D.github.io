@@ -4,8 +4,17 @@ import LaunchIcon from '@mui/icons-material/Launch'
 import './FeaturedProject.css'
 
 const FeaturedProject = ({ project, index }) => {
-  const { name, description, stack, sourceCode, livePreview, image, imageAlt } =
-    project
+  const {
+    name,
+    description,
+    stack,
+    sourceCode,
+    livePreview,
+    image,
+    imageAlt,
+    imagePosition,
+  } = project
+  const imageStyle = imagePosition ? { objectPosition: imagePosition } : undefined
   const primaryLink = livePreview || sourceCode
 
   const media = (
@@ -21,6 +30,7 @@ const FeaturedProject = ({ project, index }) => {
             src={image}
             alt={imageAlt || `${name} screenshot`}
             className="featured__image"
+            style={imageStyle}
             loading="lazy"
             decoding="async"
           />
@@ -30,6 +40,7 @@ const FeaturedProject = ({ project, index }) => {
           src={image}
           alt={imageAlt || `${name} screenshot`}
           className="featured__image"
+          style={imageStyle}
           loading="lazy"
           decoding="async"
         />

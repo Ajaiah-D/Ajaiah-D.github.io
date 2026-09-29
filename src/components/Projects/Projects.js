@@ -15,7 +15,7 @@ const Projects = () => {
     <section id="projects" className="section projects">
       <Reveal>
         <h2 className="section__title">
-          <span className="section__title-number">02.</span> Projects
+          Projects
         </h2>
       </Reveal>
 

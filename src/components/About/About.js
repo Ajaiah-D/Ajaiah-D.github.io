@@ -13,7 +13,7 @@ const About = () => {
       <div className="about__grid-bg" aria-hidden="true" />
 
       <div className="about__inner">
-        <p className="about__eyebrow">Hi, my name is</p>
+        <p className="about__eyebrow">New York · Open to data roles</p>
         {name && (
           <h1 className="about__name">
             {name}
