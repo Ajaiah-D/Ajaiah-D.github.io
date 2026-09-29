@@ -1,5 +1,9 @@
 import courseraLogo from './assets/certificates/Coursera.png'
 import resumePDF from './assets/certificates/Ajaiah_Darlington_Resume.pdf'
+import shotBasketball from './assets/screenshots/basketball_iq.png'
+import shotPortfolioRisk from './assets/screenshots/portfolio_analysis.png'
+import shotHealthcare from './assets/screenshots/healthcare_dashboard.png'
+import shotFred from './assets/screenshots/economic_indicators.png'
 
 export const about = {
   name: 'Ajaiah Darlington',
@@ -27,6 +31,10 @@ export const projects = [
     description:
       'An NBA analytics platform that backfilled 47 seasons (roughly 1.09M player-game rows) from the NBA stats API through a rate-limited ingestion client into a DuckDB warehouse, modeled with dbt across 9 models and 23 passing tests, and served through a FotMob-style Streamlit dashboard with advanced-metric leaderboards, trivia mini-games, and a password-gated SQL workbench. A weekly job re-ingests and republishes the warehouse so the live version stays current.',
     stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'Parquet', 'Docker'],
+    featured: true,
+    image: shotBasketball,
+    imageAlt:
+      'Basketball IQ dashboard showing 2025-26 league leaders, efficiency leaders and conference standings',
     sourceCode: 'https://github.com/Ajaiah-D/basketball-intelligence-platform',
     livePreview: 'https://basketball-intelligence-platform-swbwhpr8numf57yyrar22w.streamlit.app/players'
   },
@@ -35,6 +43,10 @@ export const projects = [
     description:
       'A 6-tab interactive dashboard where users build a real dollar-weighted portfolio from 530+ S&P 500 stocks and ETFs and see risk and return metrics (Sharpe, Sortino, Beta, VaR/CVaR, max drawdown) benchmarked against SPY, plus an efficient frontier optimizer and Monte Carlo return projections. Every number comes with a plain-English reading and a glossary, and any portfolio is shareable as a link. Prices refresh each weekday through GitHub Actions, and 47 pytest tests include headless end-to-end runs of the real app.',
     stack: ['Python', 'Streamlit', 'Plotly', 'pandas', 'NumPy', 'SQLite', 'GitHub Actions', 'pytest'],
+    featured: true,
+    image: shotPortfolioRisk,
+    imageAlt:
+      'Portfolio Risk Analysis app with the portfolio builder sidebar and a three-step walkthrough',
     sourceCode: 'https://github.com/Ajaiah-D/Portfolio-Risk-Analysis',
     livePreview: 'https://ajaiah-d-portfolio-risk--streamlit-appportfolio-analyzer-ij9gqb.streamlit.app/'
   },
@@ -43,6 +55,10 @@ export const projects = [
     description:
       'An analytics pipeline on CMS synthetic Medicare data covering 116,000 beneficiaries across three years, spanning a 5.5M-row prescription events file. Six sequential notebooks detect 30-day hospital readmissions, quantify per-condition cost impact, and pre-aggregate 18 export tables so the Tableau dashboard stays fast and the logic stays auditable. The headline finding: patients with both heart failure and COPD cost nine times more per year than patients with neither.',
     stack: ['Python', 'pandas', 'SQL', 'SQLite', 'Jupyter Notebooks', 'Tableau'],
+    featured: true,
+    image: shotHealthcare,
+    imageAlt:
+      'Healthcare claims Tableau dashboard charting spending tiers, top chronic conditions and readmission risk',
     sourceCode: 'https://github.com/Ajaiah-D/Healthcare-Claims-Analytics',
     livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/HealthcareClaimsAnalyticsDashboard_17777471179890/HealthcareClaims-Summary'
   },
@@ -51,6 +67,10 @@ export const projects = [
     description:
       'An end-to-end pipeline over 165+ Federal Reserve series: national indicators feeding a recession-risk signal backtested against all 9 NBER recessions since 1959, state-level unemployment, house prices, and income for all 50 states plus DC, and ALFRED vintage data that reconstructs what the economy looked like on any past date versus what\'s known now. Airflow orchestrates ingestion to S3, dbt builds the marts, and a three-page Streamlit dashboard writes its own monthly briefing from the data, refreshed daily through GitHub Actions.',
     stack: ['Python', 'Apache Airflow', 'dbt', 'DuckDB', 'AWS S3', 'PySpark', 'Streamlit', 'Plotly'],
+    featured: true,
+    image: shotFred,
+    imageAlt:
+      'U.S. Economic Indicators dashboard showing the recession-risk signal, an auto-written monthly brief and latest readings',
     sourceCode: 'https://github.com/Ajaiah-D/Economic-Indicators-Pipeline',
     livePreview: 'https://ajaiah-d-economic-indicators-pipeline-dashboardapp-d8tih5.streamlit.app/'
   },
