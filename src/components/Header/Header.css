@@ -47,12 +47,6 @@
   transition: color 0.2s ease;
 }
 
-.nav-link__number {
-  color: var(--text-accent);
-  font-size: 0.8rem;
-  margin-right: 0.1rem;
-}
-
 .nav-link:hover {
   color: var(--text-primary);
 }

@@ -4,7 +4,8 @@
   --bg-panel: #ffffff;
   --text-primary: #0a0a0a;
   --text-secondary: #6b6b6b;
-  --text-accent: #fc88e5;
+  --text-accent: #b52a96;
+  --accent-fill: #fc88e5;
   --accent-strong: #e05cc4;
   --highlight: #fce8f9;
   --border-color: #e8e5e1;
@@ -23,6 +24,7 @@ html[data-theme='dark'] {
   --text-primary: #f0eeeb;
   --text-secondary: #9a9a9a;
   --text-accent: #fc88e5;
+  --accent-fill: #fc88e5;
   --accent-strong: #fda3ec;
   --highlight: #2a1025;
   --border-color: #222222;
@@ -52,7 +54,7 @@ body {
 }
 
 ::selection {
-  background-color: var(--text-accent);
+  background-color: var(--accent-fill);
   color: #0a0a0a;
 }
 
@@ -74,12 +76,6 @@ body {
   letter-spacing: -0.02em;
   color: var(--text-primary);
   margin-bottom: 3.5rem;
-}
-
-.section__title-number {
-  color: var(--text-accent);
-  font-size: 0.85em;
-  font-weight: 600;
 }
 
 .section__title::after {
@@ -111,7 +107,7 @@ a {
 /* ========== Buttons ========== */
 .btn {
   display: inline-block;
-  background-color: var(--text-accent);
+  background-color: var(--accent-fill);
   color: #0a0a0a;
   border: none;
   padding: 0.85rem 1.9rem;

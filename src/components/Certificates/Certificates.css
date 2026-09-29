@@ -82,6 +82,12 @@
   box-shadow: 0 8px 28px var(--glow);
 }
 
+.certificate--static:hover {
+  transform: none;
+  border-color: var(--border-color);
+  box-shadow: none;
+}
+
 .certificate__image {
   width: 44px;
   height: 44px;

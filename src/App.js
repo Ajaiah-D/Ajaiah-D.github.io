@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/Header/Header'
 import About from './components/About/About'
+import Experience from './components/Experience/Experience'
 import Projects from './components/Projects/Projects'
 import Certificates from './components/Certificates/Certificates'
 import Contact from './components/Contact/Contact'
@@ -12,12 +13,13 @@ function App() {
       <Header />
       <main>
         <About />
+        <Experience />
         <Projects />
         <Certificates />
         <Contact />
       </main>
       <footer className="footer">
-        Designed &amp; built by{' '}
+        © {new Date().getFullYear()}{' '}
         <a href={about.social.github} target="_blank" rel="noopener noreferrer">
           Ajaiah Darlington
         </a>

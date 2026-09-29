@@ -17,6 +17,31 @@ export const about = {
   },
 }
 
+export const experience = [
+  {
+    role: 'Data Operations Specialist',
+    company: 'Amalgamated Life Insurance Company',
+    location: 'White Plains, NY',
+    dates: 'Sep 2025 – Present',
+    current: true,
+    points: [
+      'Validate and reconcile pension and benefits records across internal insurance systems, keeping regulated data accurate and compliant.',
+      'Built Excel audit logs, tracking templates, and macros that automate recurring documentation work, standardizing data quality checks and cutting resolution time.'
+    ]
+  },
+  {
+    role: 'Data Analyst',
+    company: 'IBM',
+    location: 'New York, NY',
+    dates: 'Sep 2022 – May 2024',
+    points: [
+      'Automated an end-to-end reporting workflow in Python and SQL, turning a multi-day manual process into same-day delivery and eliminating recurring data inconsistencies.',
+      'Wrote and optimized SQL to extract, transform, and validate data from multiple source systems, feeding scheduled Power BI refreshes and tracing reporting discrepancies back to their root cause.',
+      'Built and maintained Power BI and Tableau dashboards presented to leadership across 6+ cross-functional teams.'
+    ]
+  }
+]
+
 export const projects = [
   {
     name: 'Kroos: Local AI Assistant',
@@ -46,7 +71,7 @@ export const projects = [
     featured: true,
     image: shotPortfolioRisk,
     imageAlt:
-      'Portfolio Risk Analysis app with the portfolio builder sidebar and a three-step walkthrough',
+      'Portfolio Risk Analysis app showing an example portfolio beating SPY, automatic insights, and Sharpe, Sortino and Beta readings',
     sourceCode: 'https://github.com/Ajaiah-D/Portfolio-Risk-Analysis',
     livePreview: 'https://ajaiah-d-portfolio-risk--streamlit-appportfolio-analyzer-ij9gqb.streamlit.app/'
   },
@@ -57,6 +82,7 @@ export const projects = [
     stack: ['Python', 'pandas', 'SQL', 'SQLite', 'Jupyter Notebooks', 'Tableau'],
     featured: true,
     image: shotHealthcare,
+    imagePosition: 'left top',
     imageAlt:
       'Healthcare claims Tableau dashboard charting spending tiers, top chronic conditions and readmission risk',
     sourceCode: 'https://github.com/Ajaiah-D/Healthcare-Claims-Analytics',
@@ -162,7 +188,7 @@ export const certificates = [
     title: 'Google Data Analytics',
     issuer: 'Google / Coursera',
     image: courseraLogo,
-    link: 'https://coursera.org'
+    link: null
   }
 ]
 
