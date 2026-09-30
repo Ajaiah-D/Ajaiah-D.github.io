@@ -1,20 +1,9 @@
-/* Tight top padding so the first project cards peek into the first screen. */
 .projects {
-  padding-top: 2.5rem;
+  padding-top: 4.5rem;
 }
 
 .projects .section__title {
-  margin-bottom: 1.75rem;
-}
-
-@media (max-height: 820px) and (min-width: 1025px) {
-  .projects {
-    padding-top: 2rem;
-  }
-
-  .projects .section__title {
-    margin-bottom: 1.4rem;
-  }
+  margin-bottom: 2.5rem;
 }
 
 .projects__featured,
