@@ -1,7 +1,7 @@
 .about {
   position: relative;
   box-sizing: border-box;
-  padding: 8rem var(--gutter) 1.25rem;
+  padding: 8rem var(--gutter) 3rem;
   overflow: hidden;
 }
 
@@ -90,16 +90,20 @@
   color: var(--text-secondary);
 }
 
-.about__desc {
-  font-size: 1.12rem;
+.about__lead {
+  font-size: 1.15rem;
   margin-top: 1.5rem;
-  color: var(--text-secondary);
-  line-height: 1.75;
-  max-width: 580px;
+  color: var(--text-primary);
+  line-height: 1.7;
+  max-width: 600px;
 }
 
-.about__desc::first-line {
-  color: var(--text-primary);
+.about__desc {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 600px;
 }
 
 .about__contact {
@@ -171,7 +175,7 @@
     font-size: clamp(1.4rem, 2.6vw, 2rem);
   }
 
-  .about__desc {
+  .about__lead {
     margin-top: 1.1rem;
   }
 

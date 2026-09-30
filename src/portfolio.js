@@ -8,8 +8,10 @@ import shotFred from './assets/screenshots/economic_indicators.png'
 export const about = {
   name: 'Ajaiah Darlington',
   role: 'Data Analyst & Analytics Engineer',
-  description:
+  intro:
     'I build the pipelines, models, and dashboards that turn raw data into decisions people can act on. My projects run from Medicare claims to NBA box scores, and five of them are live for you to try below.',
+  description:
+    "I believe the best outcomes come from having as much information as possible, avoiding unnecessary risk, and applying real domain knowledge without wasting effort getting there. That philosophy led me to data. I use my technical skills to build pipelines, models, and systems that apply this thinking to real problems, in healthcare, finance, and sports, turning raw information into something people can act on with confidence.",
   highlights: [
     { value: '1.09M', label: 'NBA player-games modeled across 47 seasons' },
     { value: '116K', label: 'Medicare patients analyzed for cost and readmission risk' },
