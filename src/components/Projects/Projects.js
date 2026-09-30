@@ -21,9 +21,9 @@ const Projects = () => {
 
       {featured.length > 0 && (
         <div className="projects__featured">
-          {featured.map((project) => (
+          {featured.map((project, index) => (
             <Reveal key={project.name}>
-              <FeaturedProject project={project} />
+              <FeaturedProject project={project} eager={index < 2} />
             </Reveal>
           ))}
         </div>
