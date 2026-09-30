@@ -21,9 +21,9 @@ const Projects = () => {
 
       {featured.length > 0 && (
         <div className="projects__featured">
-          {featured.map((project, index) => (
+          {featured.map((project) => (
             <Reveal key={project.name}>
-              <FeaturedProject project={project} index={index} />
+              <FeaturedProject project={project} />
             </Reveal>
           ))}
         </div>

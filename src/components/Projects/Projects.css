@@ -1,6 +1,13 @@
+.projects__featured,
 .projects__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.projects__featured > .reveal,
+.projects__list > .reveal {
+  height: 100%;
 }
 
 .projects__more {
@@ -8,6 +15,12 @@
 }
 
 @media (max-width: 900px) {
+  .projects__featured,
+  .projects__list {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
   .projects__more {
     margin-top: 3.5rem;
   }
