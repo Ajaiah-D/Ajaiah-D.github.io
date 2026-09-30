@@ -30,7 +30,7 @@ export const experience = [
     role: 'Data Operations Specialist',
     company: 'Amalgamated Life Insurance Company',
     location: 'White Plains, NY',
-    dates: 'Sep 2025 – Present',
+    dates: 'Sep 2025 - Present',
     current: true,
     points: [
       'Validate and reconcile pension and benefits records across internal insurance systems, keeping regulated data accurate and compliant.',
@@ -41,7 +41,7 @@ export const experience = [
     role: 'Data Analyst',
     company: 'IBM',
     location: 'New York, NY',
-    dates: 'Sep 2022 – May 2024',
+    dates: 'Sep 2022 - May 2024',
     points: [
       'Automated an end-to-end reporting workflow in Python and SQL, turning a multi-day manual process into same-day delivery and eliminating recurring data inconsistencies.',
       'Wrote and optimized SQL to extract, transform, and validate data from multiple source systems, feeding scheduled Power BI refreshes and tracing reporting discrepancies back to their root cause.',
@@ -54,7 +54,7 @@ export const projects = [
   {
     name: 'Kroos: Local AI Assistant',
     description:
-      'A personal AI assistant that runs entirely on my own machine: a local LLM through Ollama with Discord as the interface, so nothing leaves my computer. Since local models lack native tool calling, I built a system that parses structured actions out of plain-text replies and executes them deterministically: task reminders, Google Calendar sync, daily market and sports briefings, alerts when a stock moves far outside its own normal range, and uptime and freshness checks on my other deployed apps.',
+      'A personal AI assistant that runs entirely on my own machine, using a local LLM through Ollama with Discord as the interface, so nothing leaves my computer. Local models can\'t call tools on their own, so I built a layer that pulls structured actions out of plain-text replies and executes them in code. It handles task reminders, Google Calendar sync, and daily market and sports briefings. It also flags stocks moving far outside their normal range and checks that my deployed apps are up and current.',
     stack: ['Python', 'Ollama', 'Gemma 3 27B', 'Discord.py', 'SQLite', 'APScheduler', 'yfinance', 'Google Calendar API'],
     sourceCode: null,
     livePreview: null
@@ -62,8 +62,8 @@ export const projects = [
   {
     name: 'Basketball Intelligence Platform',
     description:
-      'An NBA analytics platform that backfilled 47 seasons (roughly 1.09M player-game rows) from the NBA stats API through a rate-limited ingestion client into a DuckDB warehouse, modeled with dbt across 9 models and 23 passing tests, and served through a FotMob-style Streamlit dashboard with advanced-metric leaderboards, trivia mini-games, and a password-gated SQL workbench. A weekly job re-ingests and republishes the warehouse so the live version stays current.',
-    stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'Parquet', 'Docker'],
+      'An NBA analytics platform that backfilled 47 seasons (roughly 1.09M player-game rows) from the NBA stats API into a DuckDB warehouse through a rate-limited ingestion client. It\'s modeled in dbt (16 models, 67 passing tests) and served through a FotMob-style Streamlit dashboard with advanced-metric leaderboards, trivia games, an Elo-based game predictor, and team payroll against salary cap history back to 1984-85. A weekly job refreshes the warehouse during the season.',
+    stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'scikit-learn', 'Docker'],
     featured: true,
     image: shotBasketball,
     imageAlt:
@@ -74,7 +74,7 @@ export const projects = [
   {
     name: 'Portfolio Risk Analysis Dashboard',
     description:
-      'A 6-tab interactive dashboard where users build a real dollar-weighted portfolio from 530+ S&P 500 stocks and ETFs and see risk and return metrics (Sharpe, Sortino, Beta, VaR/CVaR, max drawdown) benchmarked against SPY, plus an efficient frontier optimizer and Monte Carlo return projections. Every number comes with a plain-English reading and a glossary, and any portfolio is shareable as a link. Prices refresh each weekday through GitHub Actions, and 47 pytest tests include headless end-to-end runs of the real app.',
+      'A 6-tab interactive dashboard where users build a dollar-weighted portfolio from 530+ S&P 500 stocks and ETFs and see risk and return metrics (Sharpe, Sortino, Beta, VaR/CVaR, max drawdown) benchmarked against SPY, plus an efficient frontier optimizer and Monte Carlo projections. Every number comes with a plain-English reading and a glossary, and any portfolio is shareable as a link. Prices refresh each weekday through GitHub Actions, and 47 pytest tests include headless runs of the real app.',
     stack: ['Python', 'Streamlit', 'Plotly', 'pandas', 'NumPy', 'SQLite', 'GitHub Actions', 'pytest'],
     featured: true,
     image: shotPortfolioRisk,
@@ -86,7 +86,7 @@ export const projects = [
   {
     name: 'Healthcare Claims Analytics',
     description:
-      'An analytics pipeline on CMS synthetic Medicare data covering 116,000 beneficiaries across three years, spanning a 5.5M-row prescription events file. Six sequential notebooks detect 30-day hospital readmissions, quantify per-condition cost impact, and pre-aggregate 18 export tables so the Tableau dashboard stays fast and the logic stays auditable. The headline finding: patients with both heart failure and COPD cost nine times more per year than patients with neither.',
+      'An analytics pipeline on CMS synthetic Medicare data covering 116,000 beneficiaries over three years, including a 5.5M-row prescription events file. Six notebooks, run in order, detect 30-day hospital readmissions, measure what each chronic condition adds to cost, and pre-aggregate 18 tables so the Tableau dashboard loads fast and the logic stays easy to audit. The biggest finding is that patients with both heart failure and COPD cost nine times more per year than patients with neither.',
     stack: ['Python', 'pandas', 'SQL', 'SQLite', 'Jupyter Notebooks', 'Tableau'],
     featured: true,
     image: shotHealthcare,
@@ -99,8 +99,8 @@ export const projects = [
   {
     name: 'FRED Economic Indicators Pipeline',
     description:
-      'An end-to-end pipeline over 165+ Federal Reserve series: national indicators feeding a recession-risk signal backtested against all 9 NBER recessions since 1959, state-level unemployment, house prices, and income for all 50 states plus DC, and ALFRED vintage data that reconstructs what the economy looked like on any past date versus what\'s known now. Airflow orchestrates ingestion to S3, dbt builds the marts, and a three-page Streamlit dashboard writes its own monthly briefing from the data, refreshed daily through GitHub Actions.',
-    stack: ['Python', 'Apache Airflow', 'dbt', 'DuckDB', 'AWS S3', 'PySpark', 'Streamlit', 'Plotly'],
+      'A data pipeline over 160+ Federal Reserve series covering national indicators plus unemployment, house prices, and income for all 50 states and DC. Its recession-risk signal was backtested against every NBER recession since 1959 and flagged all 9. ALFRED vintage data rebuilds what the economy looked like on any past date versus what\'s known now. GitHub Actions reruns the whole chain daily, from S3 through dbt on DuckDB, and a three-page Streamlit dashboard writes its own monthly briefing.',
+    stack: ['Python', 'dbt', 'DuckDB', 'AWS S3', 'Apache Airflow', 'GitHub Actions', 'Streamlit', 'Plotly'],
     featured: true,
     image: shotFred,
     imageAlt:
@@ -111,7 +111,7 @@ export const projects = [
   {
     name: 'Soccer Player Tracking & Formation Analysis',
     description:
-      'A computer vision pipeline that turns a broadcast soccer clip into per-player tracking data, team assignments, and a formation read for each phase of possession, output as an annotated video with a top-down minimap. YOLOv8 and ByteTrack hold player IDs across frames, jersey-color clustering splits the teams, and a homography chain corrects for camera pan and zoom before positions are matched against nine formation templates. On a 30-second test clip: 20 players tracked per frame, teams correct on every checked track.',
+      'A computer vision pipeline that turns a broadcast soccer clip into tracking data for every player and a formation read for each team during each phase of possession, output as an annotated video with a top-down minimap. YOLOv8 and ByteTrack keep player IDs stable from frame to frame, jersey colors separate the teams, and a homography step corrects for camera pan and zoom. On a 30-second test clip it tracked an average of 20 players per frame and assigned teams correctly on every spot-checked track.',
     stack: ['Python', 'PyTorch', 'YOLOv8', 'ByteTrack', 'OpenCV', 'scikit-learn', 'SciPy', 'NumPy'],
     sourceCode: 'https://github.com/Ajaiah-D/player-tracking',
     livePreview: null
@@ -119,7 +119,7 @@ export const projects = [
   {
     name: 'Cross-League Player Value Translation Engine',
     description:
-      'A five-phase pipeline measuring how much of a player\'s production survives a move between leagues, learned from 1,871 real transfers across nine leagues — the American pyramid plus Europe\'s Big 5. It merges three public data sources, matches player identities across them, adjusts for age, and produces a league strength scale (Premier League 1.36, MLS 1.00, MLS NEXT Pro 0.58). It also counts who fails invisibly: 54% of players moving up from MLS NEXT Pro never see real minutes. Held-out transfers confirm the factors beat chance.',
+      'A five-phase pipeline that measures how much of a player\'s production survives a move between leagues, learned from 1,871 transfers across nine leagues in the American pyramid and Europe\'s Big 5. It merges three public data sources, matches players across them, and adjusts for age to produce a league strength scale (Premier League 1.36, MLS 1.00, MLS NEXT Pro 0.58). It also tracks moves that quietly fail, like the 54% of players stepping up from MLS NEXT Pro who never earn real minutes. Held-out transfers confirm the scale beats chance.',
     stack: ['Python', 'pandas', 'NumPy', 'rapidfuzz', 'Selenium', 'Pydantic', 'uv', 'pytest'],
     sourceCode: 'https://github.com/Ajaiah-D/soccer-translation',
     livePreview: null
@@ -127,7 +127,7 @@ export const projects = [
   {
     name: 'Football Player Profiler',
     description:
-      'A cloud-backed football analytics app covering roughly 16,000 player-season records across 7 seasons of Europe\'s Big 5 leagues. Search any player to see percentile rankings against others in their position group, or find the most statistically similar players — goalkeepers included — using a cosine-similarity model on per-90 stats. Data is scraped from FBref, cleaned, and served live from a 3-layer BigQuery warehouse.',
+      'A cloud-backed football analytics app covering roughly 16,000 player-season records from 7 seasons of Europe\'s Big 5 leagues. Search any player to see how they rank against others in their position, or find the most statistically similar players, goalkeepers included, using a cosine-similarity model on per-90 stats. The data is scraped from FBref, cleaned, and queried live from a 3-layer BigQuery warehouse.',
     stack: ['Python', 'pandas', 'NumPy', 'BeautifulSoup', 'BigQuery', 'Google Cloud Storage', 'Streamlit', 'Docker'],
     sourceCode: 'https://github.com/M4G1C14N5/scouting-report',
     livePreview: null
@@ -135,7 +135,7 @@ export const projects = [
   {
     name: 'Scouting Intelligence Pipeline & Dashboard',
     description:
-      'A 5-stage Python pipeline that surfaces undervalued footballers across Europe\'s Big 5 leagues by merging two seasons of FBref performance stats with Transfermarkt market valuations. Two-pass exact-then-fuzzy name matching joined 94.9% of 3,008 player-seasons; a position-weighted, league-adjusted score is then divided by market value to rank 2,854 players in a Tableau dashboard.',
+      'A 5-stage Python pipeline that surfaces undervalued footballers across Europe\'s Big 5 leagues by merging two seasons of FBref performance stats with Transfermarkt market valuations. Two-pass name matching (exact, then fuzzy) joined 94.9% of 3,008 player-seasons. Each player\'s position-weighted, league-adjusted score is then divided by market value, ranking 2,854 players in a Tableau dashboard.',
     stack: ['Python', 'pandas', 'NumPy', 'fuzzywuzzy', 'unidecode', 'Jupyter Notebooks', 'Tableau'],
     sourceCode: 'https://github.com/Ajaiah-D/DA-Course-Scouting-Intelligence-Pipeline-and-Dashboard',
     livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/ScoutingIntelligenceDashboard_17762156549180/Overview'
@@ -143,7 +143,7 @@ export const projects = [
   {
     name: 'Options Strategy Research',
     description:
-      'A version-controlled research project tracking seven versions of a mean-reversion strategy backtested on QuantConnect\'s LEAN engine, with every failed run kept and post-mortemed rather than deleted. A study of 1,371 dip/rally events across 10 ETFs found a 58–62% hit rate on 2-sigma dips and killed the short side; three losing options versions then traced the damage to the options structure itself, and the final version dropped options for plain shares — the first profitable run, +3.8% with an 8% max drawdown.',
+      'A version-controlled research log of seven versions of a mean-reversion strategy backtested on QuantConnect\'s LEAN engine, keeping every failed run and its write-up. A study of 1,371 dip and rally events across 10 ETFs found a 58 to 62% hit rate on 2-sigma dips and ruled out the short side. Three losing options versions pointed to the options structure, not the signal, so the final version switched to plain shares and became the first profitable run, up 3.8% with an 8% max drawdown.',
     stack: ['Python', 'QuantConnect LEAN', 'pandas', 'NumPy', 'Git'],
     sourceCode: null,
     livePreview: null
@@ -151,7 +151,7 @@ export const projects = [
   {
     name: 'Soccer Media Benchmarking Dashboard',
     description:
-      'An ELT pipeline that pulls YouTube channel statistics for five major soccer media outlets and ranks them by views per subscriber, so a smaller channel that actually gets watched can outrank a bigger one. Timestamped snapshots land in BigQuery and flow through a three-layer dbt model into a cached Streamlit dashboard with per-channel view, video, and engagement breakdowns.',
+      'An ELT pipeline that pulls YouTube channel statistics for five major soccer media outlets and ranks them by views per subscriber, so a smaller channel that actually gets watched can outrank a bigger one. Timestamped snapshots land in BigQuery and flow through a three-layer dbt model into a cached Streamlit dashboard that also compares average views per video.',
     stack: ['Python', 'YouTube Data API', 'BigQuery', 'dbt', 'SQL', 'Streamlit', 'Plotly'],
     sourceCode: 'https://github.com/Ajaiah-D/soccer-media-benchmarking',
     livePreview: null
@@ -159,7 +159,7 @@ export const projects = [
   {
     name: 'Sleep Better',
     description:
-      'A full-stack sleep app where signed-in users enter nine sleep and lifestyle metrics and get a machine learning predicted sleep efficiency score saved to their history. A React and TypeScript frontend with Firebase sign-in is deployed on Render, talking to a FastAPI backend that serves a random forest model trained on Kaggle sleep data (mean error 3.6 points) and writes every prediction to PostgreSQL.',
+      'A full-stack sleep app where signed-in users enter nine sleep and lifestyle metrics and get a predicted sleep efficiency score from a machine learning model. The React and TypeScript frontend uses Firebase sign-in and is deployed on Render. A FastAPI backend serves a random forest model trained on Kaggle sleep data, with an average error of 3.6 points, and stores each prediction in PostgreSQL.',
     stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Firebase', 'FastAPI', 'PostgreSQL', 'scikit-learn'],
     sourceCode: 'https://github.com/Ajaiah-D/HunterCapstoneSpring2025',
     livePreview: null
