@@ -52,12 +52,12 @@ const ProjectContainer = ({ project, index }) => {
           {livePreview && (
             <a
               href={livePreview}
-              aria-label="Live Preview"
-              className="link link--icon"
+              aria-label={`${name} live demo`}
+              className="featured__demo"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LaunchIcon />
+              Live demo <LaunchIcon />
             </a>
           )}
         </div>
