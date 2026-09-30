@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.f615a0e0.css",
-    "main.js": "/static/js/main.7d751c83.js",
+    "main.js": "/static/js/main.40d1e52e.js",
     "static/media/basketball_iq.png": "/static/media/basketball_iq.07ab1f39d893e50a8c90.png",
     "static/media/economic_indicators.png": "/static/media/economic_indicators.71278f9583aa470fb310.png",
     "static/media/healthcare_dashboard.png": "/static/media/healthcare_dashboard.8c6e51a42fc901ac15af.png",
     "static/media/portfolio_analysis.png": "/static/media/portfolio_analysis.822dec6e9b84f5ee3573.png",
     "static/media/Coursera.png": "/static/media/Coursera.76bb0eb581ac4f118ca8.png",
-    "static/media/Ajaiah_Darlington_Resume.pdf": "/static/media/Ajaiah_Darlington_Resume.4db5d8b3440603179d3f.pdf",
+    "static/media/Ajaiah_Darlington_Resume.pdf": "/static/media/Ajaiah_Darlington_Resume.6f4c704a248938975689.pdf",
     "index.html": "/index.html",
     "main.f615a0e0.css.map": "/static/css/main.f615a0e0.css.map",
-    "main.7d751c83.js.map": "/static/js/main.7d751c83.js.map"
+    "main.40d1e52e.js.map": "/static/js/main.40d1e52e.js.map"
   },
   "entrypoints": [
     "static/css/main.f615a0e0.css",
-    "static/js/main.7d751c83.js"
+    "static/js/main.40d1e52e.js"
   ]
 }
