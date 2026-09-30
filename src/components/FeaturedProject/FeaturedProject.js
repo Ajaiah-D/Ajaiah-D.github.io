@@ -3,7 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import LaunchIcon from '@mui/icons-material/Launch'
 import './FeaturedProject.css'
 
-const FeaturedProject = ({ project }) => {
+const FeaturedProject = ({ project, eager = false }) => {
   const {
     name,
     description,
@@ -23,7 +23,7 @@ const FeaturedProject = ({ project }) => {
       alt={imageAlt || `${name} screenshot`}
       className="featured__image"
       style={imageStyle}
-      loading="lazy"
+      loading={eager ? 'eager' : 'lazy'}
       decoding="async"
     />
   )

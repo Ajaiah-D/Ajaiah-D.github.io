@@ -20,7 +20,9 @@ const Reveal = ({ children, delay = 0, className = '' }) => {
           observer.disconnect()
         }
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      // Reveal as soon as any part is on screen, so content peeking above the
+      // fold is visible instead of waiting at opacity 0.
+      { threshold: 0, rootMargin: '0px 0px -16px 0px' }
     )
 
     observer.observe(el)
