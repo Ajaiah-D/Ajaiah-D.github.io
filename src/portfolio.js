@@ -69,7 +69,7 @@ export const projects = [
     imageAlt:
       'Basketball IQ dashboard showing 2025-26 league leaders, efficiency leaders and conference standings',
     sourceCode: 'https://github.com/Ajaiah-D/basketball-intelligence-platform',
-    livePreview: 'https://basketball-intelligence-platform-swbwhpr8numf57yyrar22w.streamlit.app/players'
+    livePreview: 'https://basketball-intelligence-platform.streamlit.app/'
   },
   {
     name: 'Portfolio Risk Analysis Dashboard',
