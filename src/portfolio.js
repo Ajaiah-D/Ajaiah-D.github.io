@@ -62,7 +62,7 @@ export const projects = [
   {
     name: 'Basketball Intelligence Platform',
     description:
-      'An NBA stats platform covering 47 seasons, about 1.09 million player games, pulled from the NBA\'s stats site into a DuckDB database and modeled with dbt. The live dashboard has player and team pages, advanced-stat leaderboards, trivia games, team payroll against the salary cap back to 1984-85, and a game outcome predictor. The data passes 67 automated quality checks, and a weekly job keeps it current during the season.',
+      'An NBA stats platform covering 47 seasons, about 1.09 million player games, pulled from the NBA\'s stats site into a DuckDB database and modeled with dbt. The live dashboard has player and team pages, advanced-stat leaderboards, trivia games, team payroll against the salary cap back to 1984-85, and a game outcome predictor. The data passes 75 automated quality checks, and a weekly job keeps it current during the season.',
     stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'scikit-learn', 'Docker'],
     featured: true,
     image: shotBasketball,
@@ -74,7 +74,7 @@ export const projects = [
   {
     name: 'Portfolio Risk Analysis Dashboard',
     description:
-      'An interactive tool where you build a stock portfolio from 530+ S&P 500 stocks and ETFs and see how its risk and returns compare to just holding the market, using measures like Sharpe ratio, max drawdown, and value at risk. Every result comes with a plain-English explanation. It also suggests better weightings of the same holdings and runs Monte Carlo simulations of future outcomes. Prices update every weekday, and 47 automated tests check the math and the app.',
+      'An interactive tool where you build a stock portfolio from 530+ S&P 500 stocks and ETFs and see how its risk and returns compare to just holding the market, using measures like Sharpe ratio, max drawdown, and value at risk. Every result comes with a plain-English explanation. It also suggests better weightings of the same holdings and runs Monte Carlo simulations of future outcomes. Prices update every weekday, and 142 automated tests check the math and the app.',
     stack: ['Python', 'Streamlit', 'Plotly', 'pandas', 'NumPy', 'SQLite', 'GitHub Actions', 'pytest'],
     featured: true,
     image: shotPortfolioRisk,
@@ -135,7 +135,7 @@ export const projects = [
   {
     name: 'Scouting Intelligence Pipeline & Dashboard',
     description:
-      'A scouting tool that looks for undervalued players in Europe\'s top five leagues by weighing two seasons of on-field performance against market value. It matched 94.9% of 3,008 player seasons across two data sources that spell names differently, scored each player against others in their position, and ranked 2,854 players by performance per euro of value in a Tableau dashboard.',
+      'A scouting tool that looks for undervalued players in Europe\'s top five leagues by weighing two seasons of on-field performance against market value. It matched 94.9% of 3,008 player seasons across two data sources that spell names differently, scored each player against others in their position, and ranked 2,854 player seasons by performance per euro of value in a Tableau dashboard.',
     stack: ['Python', 'pandas', 'NumPy', 'fuzzywuzzy', 'unidecode', 'Jupyter Notebooks', 'Tableau'],
     sourceCode: 'https://github.com/Ajaiah-D/DA-Course-Scouting-Intelligence-Pipeline-and-Dashboard',
     livePreview: 'https://public.tableau.com/app/profile/ajaiah.darlington/viz/ScoutingIntelligenceDashboard_17762156549180/Overview'
