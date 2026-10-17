@@ -4,12 +4,13 @@ import shotBasketball from './assets/screenshots/basketball_iq.png'
 import shotPortfolioRisk from './assets/screenshots/portfolio_analysis.png'
 import shotHealthcare from './assets/screenshots/healthcare_dashboard.png'
 import shotFred from './assets/screenshots/economic_indicators.png'
+import shotScoutingHub from './assets/screenshots/scouting_hub.png'
 
 export const about = {
   name: 'Ajaiah Darlington',
   role: 'Data Analyst & Analytics Engineer',
   intro:
-    'I build the pipelines, models, and dashboards that turn raw data into decisions people can act on. My projects run from Medicare claims to NBA box scores, and five of them are live for you to try below.',
+    'I build the pipelines, models, and dashboards that turn raw data into decisions people can act on. My projects run from Medicare claims to NBA box scores, and six of them are live for you to try below.',
   description:
     "I believe the best outcomes come from having as much information as possible, avoiding unnecessary risk, and applying real domain knowledge without wasting effort getting there. That philosophy led me to data. I use my technical skills to build pipelines, models, and systems that apply this thinking to real problems, in healthcare, finance, and sports, turning raw information into something people can act on with confidence.",
   highlights: [
@@ -67,7 +68,7 @@ export const projects = [
     featured: true,
     image: shotBasketball,
     imageAlt:
-      'Basketball IQ dashboard showing 2025-26 league leaders, efficiency leaders and conference standings',
+      'Basketball IQ dashboard showing the 2025-26 season overview, league leaders and efficiency leaders',
     sourceCode: 'https://github.com/Ajaiah-D/basketball-intelligence-platform',
     livePreview: 'https://basketball-intelligence-platform.streamlit.app/'
   },
@@ -79,7 +80,7 @@ export const projects = [
     featured: true,
     image: shotPortfolioRisk,
     imageAlt:
-      'Portfolio Risk Analysis app showing an example portfolio beating SPY, automatic insights, and Sharpe, Sortino and Beta readings',
+      'Portfolio Risk Analysis app showing an example portfolio against SPY: total return, volatility, Sharpe ratio, max drawdown and automatic insights',
     sourceCode: 'https://github.com/Ajaiah-D/Portfolio-Risk-Analysis',
     livePreview: 'https://ajaiah-d-portfolio-risk--streamlit-appportfolio-analyzer-ij9gqb.streamlit.app/'
   },
@@ -125,12 +126,16 @@ export const projects = [
     livePreview: null
   },
   {
-    name: 'Football Player Profiler',
+    name: 'Scouting Hub',
     description:
       'A scouting app covering about 16,000 player seasons across seven years of Europe\'s top five leagues. Search any player to see how they rank against others in the same position, or find the players whose stats look most like theirs, goalkeepers included. The data is scraped from FBref, cleaned in Python, and stored in Google BigQuery.',
     stack: ['Python', 'pandas', 'NumPy', 'BeautifulSoup', 'BigQuery', 'Google Cloud Storage', 'Streamlit', 'Docker'],
+    featured: true,
+    image: shotScoutingHub,
+    imageAlt:
+      'Scouting Hub app showing the 2023-24 profile of Mohamed Salah: stat tiles and percentile bars against other forwards',
     sourceCode: 'https://github.com/M4G1C14N5/scouting-report',
-    livePreview: null
+    livePreview: 'https://fae.camuedlabs.org'
   },
   {
     name: 'Scouting Intelligence Pipeline & Dashboard',
