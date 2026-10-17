@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.f615a0e0.css",
-    "main.js": "/static/js/main.47173c2f.js",
-    "static/media/basketball_iq.png": "/static/media/basketball_iq.07ab1f39d893e50a8c90.png",
-    "static/media/economic_indicators.png": "/static/media/economic_indicators.71278f9583aa470fb310.png",
+    "main.js": "/static/js/main.daa8e21e.js",
+    "static/media/basketball_iq.png": "/static/media/basketball_iq.b25a035e8a4b28416c86.png",
+    "static/media/portfolio_analysis.png": "/static/media/portfolio_analysis.2f356632de7258dff0e2.png",
+    "static/media/economic_indicators.png": "/static/media/economic_indicators.ac8b4b6fbb01f162e845.png",
+    "static/media/scouting_hub.png": "/static/media/scouting_hub.21d2c949038b0a0b54c7.png",
     "static/media/healthcare_dashboard.png": "/static/media/healthcare_dashboard.8c6e51a42fc901ac15af.png",
-    "static/media/portfolio_analysis.png": "/static/media/portfolio_analysis.822dec6e9b84f5ee3573.png",
     "static/media/Coursera.png": "/static/media/Coursera.76bb0eb581ac4f118ca8.png",
     "static/media/Ajaiah_Darlington_Resume.pdf": "/static/media/Ajaiah_Darlington_Resume.6f4c704a248938975689.pdf",
     "index.html": "/index.html",
     "main.f615a0e0.css.map": "/static/css/main.f615a0e0.css.map",
-    "main.47173c2f.js.map": "/static/js/main.47173c2f.js.map"
+    "main.daa8e21e.js.map": "/static/js/main.daa8e21e.js.map"
   },
   "entrypoints": [
     "static/css/main.f615a0e0.css",
-    "static/js/main.47173c2f.js"
+    "static/js/main.daa8e21e.js"
   ]
 }
