@@ -69,7 +69,7 @@ export const projects = [
     featured: true,
     image: shotBasketball,
     imageAlt:
-      'Basketball IQ Players page showing Luka Doncic\'s 2026-27 season: stat tiles and a points-by-game chart',
+      'Basketball IQ Compare tab: the 2025-26 seasons of Luka Doncic and Shai Gilgeous-Alexander on a percentile radar and side-by-side per-game bars',
     sourceCode: 'https://github.com/Ajaiah-D/basketball-intelligence-platform',
     livePreview: 'https://basketball-intelligence-platform.streamlit.app/'
   },
