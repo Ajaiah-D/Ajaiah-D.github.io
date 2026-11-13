@@ -64,12 +64,12 @@ export const projects = [
   {
     name: 'Basketball Intelligence Platform',
     description:
-      'An NBA stats platform for fans and analysts, covering 47 seasons and about 1.09 million player games pulled from the NBA\'s stats site into a DuckDB database and modeled with dbt. The live dashboard has player and team pages, advanced-stat leaderboards, team payroll against the salary cap back to 1984-85, and a first-pass game predictor. An arcade section adds trivia games and a team builder where you build or draft an eight-player roster. 75 data checks and 260 tests guard it, and a weekly job keeps it current.',
+      'An NBA stats platform for fans and analysts, covering 47 seasons and about 1.09 million player games pulled from the NBA\'s stats site into a DuckDB database and modeled with dbt. The live dashboard lets you search any player and compare two from any era side by side, with advanced stats on the player and team pages, team payroll against the salary cap back to 1984-85, and a first-pass game predictor. An arcade section adds trivia games and a team builder where you build or draft an eight-player roster. 132 data checks and 1,002 tests guard it, and a daily job keeps it current.',
     stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'scikit-learn', 'pytest', 'Docker'],
     featured: true,
     image: shotBasketball,
     imageAlt:
-      'Basketball IQ dashboard showing the 2025-26 season overview, league leaders and efficiency leaders',
+      'Basketball IQ Players page showing Luka Doncic\'s 2026-27 season: stat tiles and a points-by-game chart',
     sourceCode: 'https://github.com/Ajaiah-D/basketball-intelligence-platform',
     livePreview: 'https://basketball-intelligence-platform.streamlit.app/'
   },
@@ -133,12 +133,12 @@ export const projects = [
   {
     name: 'Scouting Hub',
     description:
-      'A scouting app for comparing soccer players, built with Thomas Tsangou. It covers about 16,500 player seasons from Europe\'s top five leagues, 2017-18 to 2023-24, taken from an FBref snapshot and stored in Google BigQuery. Search any player to see percentile bars against others in the same position, with counting stats per 90 minutes and "lower is better" stats like cards and errors flipped. A similar-players finder ranks the closest matches and compares any two head to head on a chart, goalkeepers included.',
+      'A scouting app for comparing soccer players, built with Thomas Tsangou. It covers 19 leagues in Google BigQuery: Europe\'s top five from 2017-18 (an FBref snapshot), 15 European leagues for 2024-25 and 2025-26, including the Championship, League One and League Two (API-Football, with Understat xG for the top five), and four US leagues from 2024 to 2026 (American Soccer Analysis). Player cards show a flag and, for most players, a photo. Percentile bars rank a player\'s per-90 stats against his role, or any other position, in his league, the top five leagues or all of them. A role-aware similarity model weighs style and where a player actually lines up, so in 2025-26 Olise\'s closest match is Yamal.',
     stack: ['Python', 'pandas', 'NumPy', 'BeautifulSoup', 'BigQuery', 'Google Cloud Storage', 'Streamlit', 'Plotly', 'Docker'],
     featured: true,
     image: shotScoutingHub,
     imageAlt:
-      'Scouting Hub app showing the 2023-24 profile of Mohamed Salah: stat tiles and percentile bars against other forwards',
+      'Scouting Hub app showing the 2025-26 profile of Bukayo Saka: photo, flag, role, stat tiles and percentile bars against Premier League attacking mids and wingers',
     sourceCode: 'https://github.com/M4G1C14N5/scouting-report',
     livePreview: 'https://fae.camuedlabs.org'
   },
