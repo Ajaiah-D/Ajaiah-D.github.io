@@ -83,7 +83,7 @@ export const projects = [
     imageAlt:
       'Portfolio Risk Analysis app showing an example portfolio against SPY: total return, volatility, Sharpe ratio, max drawdown and automatic insights',
     sourceCode: 'https://github.com/Ajaiah-D/Portfolio-Risk-Analysis',
-    livePreview: 'https://ajaiah-d-portfolio-risk--streamlit-appportfolio-analyzer-ij9gqb.streamlit.app/'
+    livePreview: 'https://portfolio-risk-insights.streamlit.app/'
   },
   {
     name: 'Healthcare Claims Analytics',
@@ -108,7 +108,7 @@ export const projects = [
     imageAlt:
       'U.S. Economic Indicators dashboard showing the recession-risk signal, an auto-written monthly brief and latest readings',
     sourceCode: 'https://github.com/Ajaiah-D/Economic-Indicators-Pipeline',
-    livePreview: 'https://ajaiah-d-economic-indicators-pipeline-dashboardapp-d8tih5.streamlit.app/'
+    livePreview: 'https://economic-indicators-pipeline.streamlit.app/'
   },
   {
     name: 'Soccer Player Tracking & Formation Analysis',
