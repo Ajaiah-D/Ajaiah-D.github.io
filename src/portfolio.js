@@ -113,7 +113,7 @@ export const projects = [
   {
     name: 'Soccer Player Tracking & Formation Analysis',
     description:
-      'A soccer analysis tool that follows the players in a broadcast match clip, sorts them into teams by kit color, and estimates each team\'s shape, like a 4-4-2, for each spell of possession. It tracks players through camera pans and zooms and draws them on a top-down pitch map. On a 30-second Bundesliga test clip it followed about 20 players per frame, with YOLOv8 and OpenCV doing the detection and video work. It needs a manual pitch calibration and works on single-shot clips, and 30 seconds is too short to call a formation with confidence.',
+      'A soccer analysis tool that follows the players in a broadcast match clip, sorts them into teams by kit color, and estimates each team\'s shape, like a 4-4-2, for each spell of possession. It tracks players through camera pans and zooms and draws them on a top-down pitch map. On a 30-second Bundesliga test clip it followed about 20 players per frame, with YOLOv8 and OpenCV doing the detection and video work. It needs a manual pitch calibration and works on single-shot clips, and 30 seconds is too short to call a formation with confidence. For full matches, it measures team shape (defensive line height, length, width and compactness) by phase of play on Metrica Sports\' open tracking data and turns it into a one-file match report for coaching staff.',
     stack: ['Python', 'PyTorch', 'YOLOv8', 'ByteTrack', 'OpenCV', 'scikit-learn', 'SciPy', 'NumPy'],
     sourceCode: 'https://github.com/Ajaiah-D/player-tracking',
     livePreview: null
@@ -161,8 +161,8 @@ export const projects = [
   {
     name: 'Soccer Media Benchmarking Dashboard',
     description:
-      'A small data pipeline that pulls YouTube stats for five major soccer media channels (B/R Football, CBS Sports Golazo, The Athletic FC, Tifo Football, Copa90) and ranks them by views per subscriber, so a smaller channel with an audience that actually watches can outrank a bigger one. Each run saves a timestamped snapshot to Google BigQuery, dbt turns it into clean tables, and a Streamlit dashboard shows the rankings. It is a simple first version, run by hand, and currently shows only the latest snapshot.',
-    stack: ['Python', 'YouTube Data API', 'BigQuery', 'dbt', 'SQL', 'Streamlit', 'Plotly'],
+      'A pipeline that compares five major soccer YouTube channels (B/R Football, CBS Sports Golazo, The Athletic FC, Tifo Football, Copa90) on reach, posting volume and engagement. It pulls channel stats and every upload from the last 100 days through the YouTube Data API into Google BigQuery, models them with dbt behind 26 data checks, and shows the results in a Streamlit dashboard. In a November 2026 snapshot of 1,746 recent uploads, Tifo\'s typical video drew 327,000 views, 29 times B/R Football\'s, while CBS Sports Golazo posted almost 100 videos a week and B/R had the most engaged audience, with likes and comments equal to 3.5% of views.',
+    stack: ['Python', 'YouTube Data API', 'BigQuery', 'dbt', 'SQL', 'Streamlit', 'Plotly', 'pytest'],
     sourceCode: 'https://github.com/Ajaiah-D/soccer-media-benchmarking',
     livePreview: null
   },
