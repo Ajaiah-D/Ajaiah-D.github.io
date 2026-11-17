@@ -11,7 +11,7 @@ export const about = {
   name: 'Ajaiah Darlington',
   role: 'Data Analyst & Analytics Engineer',
   intro:
-    'I build the pipelines, models, and dashboards that turn raw data into decisions people can act on. My projects run from Medicare claims to NBA box scores, and six of them are live for you to try below.',
+    'I build the pipelines, models, and dashboards that turn raw data into decisions people can act on. My projects run from Medicare claims to NBA box scores, and seven of them are live for you to try below.',
   description:
     "I believe the best outcomes come from having as much information as possible, avoiding unnecessary risk, and applying real domain knowledge without wasting effort getting there. That philosophy led me to data. I use my technical skills to build pipelines, models, and systems that apply this thinking to real problems, in healthcare, finance, and sports, turning raw information into something people can act on with confidence.",
   highlights: [
@@ -164,7 +164,7 @@ export const projects = [
       'A pipeline that compares five major soccer YouTube channels (B/R Football, CBS Sports Golazo, The Athletic FC, Tifo Football, Copa90) on reach, posting volume and engagement. It pulls channel stats and every upload from the last 100 days through the YouTube Data API into Google BigQuery, models them with dbt behind 26 data checks, and shows the results in a Streamlit dashboard. In a November 2026 snapshot of 1,746 recent uploads, Tifo\'s typical video drew 327,000 views, 29 times B/R Football\'s, while CBS Sports Golazo posted almost 100 videos a week and B/R had the most engaged audience, with likes and comments equal to 3.5% of views.',
     stack: ['Python', 'YouTube Data API', 'BigQuery', 'dbt', 'SQL', 'Streamlit', 'Plotly', 'pytest'],
     sourceCode: 'https://github.com/Ajaiah-D/soccer-media-benchmarking',
-    livePreview: null
+    livePreview: 'https://soccer-media-benchmarking.streamlit.app/'
   },
   {
     name: 'Sleep Better',
