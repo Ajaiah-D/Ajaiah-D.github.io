@@ -64,7 +64,7 @@ export const projects = [
   {
     name: 'Basketball Intelligence Platform',
     description:
-      'An NBA stats platform for fans and analysts, covering 47 seasons and about 1.09 million player games pulled from the NBA\'s stats site into a DuckDB database and modeled with dbt. The live dashboard lets you search any player and compare two from any era side by side, with advanced stats on the player and team pages, team payroll against the salary cap back to 1984-85, and a first-pass game predictor. An arcade section adds trivia games and a team builder where you build or draft an eight-player roster. 132 data checks and 1,002 tests guard it, and a daily job keeps it current.',
+      'An NBA stats platform for fans and analysts, covering 47 seasons and about 1.09 million player games pulled from the NBA\'s stats site into a DuckDB database and modeled with dbt. The live dashboard lets you search any player and compare two from any era side by side, with advanced stats on the player and team pages, team payroll against the salary cap back to 1984-85, and a first-pass game predictor. An arcade section adds trivia games and a team builder where you build or draft an eight-player roster. 132 data checks and over 1,000 tests guard it, and a daily job keeps it current.',
     stack: ['Python', 'DuckDB', 'dbt', 'Streamlit', 'Plotly', 'nba_api', 'scikit-learn', 'pytest', 'Docker'],
     featured: true,
     image: shotBasketball,
